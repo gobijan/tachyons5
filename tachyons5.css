@@ -16270,6 +16270,11 @@ img {
 
 /* Additional Patches */
 .invert { filter: invert(1) }
+.select-none {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 @media (prefers-color-scheme:dark) {
     .dm-invert { filter: invert(1) }
