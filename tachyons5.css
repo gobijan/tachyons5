@@ -186,6 +186,30 @@ summary {
     --shadow-2:rgba(0, 0, 0, .19);
     --shadow-1:rgba(0, 0, 0, .1);
     --shadow-0:rgba(0, 0, 0, .035);
+    --overlay-tint-0: hsla(0, 0%, 100%, .05);
+    --overlay-tint-1: hsla(0, 0%, 100%, .15);
+    --overlay-tint-2: hsla(0, 0%, 100%, .25);
+    --overlay-tint-3: hsla(0, 0%, 100%, .35);
+    --overlay-tint-4: hsla(0, 0%, 100%, .45);
+    --overlay-tint-5: hsla(0, 0%, 100%, .55);
+    --overlay-tint-6: hsla(0, 0%, 100%, .65);
+    --overlay-tint-7: hsla(0, 0%, 100%, .75);
+    --overlay-tint-8: hsla(0, 0%, 100%, .85);
+    --overlay-tint-9: hsla(0, 0%, 100%, .90);
+    --overlay-tint-10: hsla(0, 0%, 100%, .95);
+    --overlay-tint-11: hsla(0, 0%, 100%, .98);
+    --overlay-shadow-0: rgba(0, 0, 0, .05);
+    --overlay-shadow-1: rgba(0, 0, 0, .15);
+    --overlay-shadow-2: rgba(0, 0, 0, .25);
+    --overlay-shadow-3: rgba(0, 0, 0, .35);
+    --overlay-shadow-4: rgba(0, 0, 0, .45);
+    --overlay-shadow-5: rgba(0, 0, 0, .55);
+    --overlay-shadow-6: rgba(0, 0, 0, .65);
+    --overlay-shadow-7: rgba(0, 0, 0, .75);
+    --overlay-shadow-8: rgba(0, 0, 0, .85);
+    --overlay-shadow-9: rgba(0, 0, 0, .90);
+    --overlay-shadow-10: rgba(0, 0, 0, .95);
+    --overlay-shadow-11: rgba(0, 0, 0, .98);
     --gray-0:#000;
     --gray-1:#171717;
     --gray-2:#2f2f2f;
@@ -14862,7 +14886,7 @@ img {
     margin-top: calc(var(--spacing-7)*-1)
 }
 
-@container (--breakpoint-2) {
+@container (min-width:30em) {
     .na1-s {
         margin: calc(var(--spacing-1)*-1)
     }
@@ -15005,7 +15029,7 @@ img {
 
 }
 
-@container (--breakpoint-3) {
+@container (min-width:48em) {
     .na1-m {
         margin: calc(var(--spacing-1)*-1)
     }
