@@ -16269,6 +16269,7 @@ img {
 }
 
 /* Additional Patches */
+.active-dim:active { opacity: .8; transition: opacity .15s ease-out }
 .invert { filter: invert(1) }
 .select-none {
     -webkit-user-select: none;
