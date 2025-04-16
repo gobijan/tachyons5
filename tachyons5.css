@@ -15332,6 +15332,11 @@ img {
     text-decoration: line-through
 }
 
+.stroke {
+    -webkit-text-stroke: 1px currentColor;
+    -webkit-text-fill-color: transparent;
+}
+
 .underline {
     text-decoration: underline
 }
