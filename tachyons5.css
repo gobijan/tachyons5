@@ -506,11 +506,11 @@ summary {
     --size-0:0;
     --size-1:1rem;
     --size-2:2rem;
-    --size-3:3rem;
-    --size-4:4rem;
-    --size-5:8rem;
-    --size-6:16rem;
-    --size-7:32rem;
+    --size-3:4rem;
+    --size-4:8rem;
+    --size-5:16rem;
+    --size-6:32rem;
+    --size-7:48rem;
     --size-8:64rem;
     --size-9:96rem;
     --shadow-color: 0 0 0;
@@ -6050,23 +6050,23 @@ img {
 }
 
 .h3 {
-    height: var(--size-3, 3rem)
+    height: var(--size-3, 4rem)
 }
 
 .h4 {
-    height: var(--size-4, 4rem)
+    height: var(--size-4, 8rem)
 }
 
 .h5 {
-    height: var(--size-5, 8rem)
+    height: var(--size-5, 16rem)
 }
 
 .h6 {
-    height: var(--size-6, 16rem)
+    height: var(--size-6, 32rem)
 }
 
 .h7 {
-    height: var(--size-7, 32rem)
+    height: var(--size-7, 48rem)
 }
 
 .h8 {
@@ -6131,23 +6131,23 @@ img {
     }
 
     .h3-s {
-        height: var(--size-3, 3rem)
+        height: var(--size-3, 4rem)
     }
 
     .h4-s {
-        height: var(--size-4, 4rem)
+        height: var(--size-4, 8rem)
     }
 
     .h5-s {
-        height: var(--size-5, 8rem)
+        height: var(--size-5, 16rem)
     }
 
     .h6-s {
-        height: var(--size-6, 16rem)
+        height: var(--size-6, 32rem)
     }
 
     .h7-s {
-        height: var(--size-7, 32rem)
+        height: var(--size-7, 48rem)
     }
 
     .h8-s {
@@ -6477,39 +6477,39 @@ img {
 }
 
 .mw1 {
-    max-width: 1rem
+    max-width: var(--size-1, 1rem)
 }
 
 .mw2 {
-    max-width: 2rem
+    max-width: var(--size-2, 2rem)
 }
 
 .mw3 {
-    max-width: 4rem
+    max-width: var(--size-3, 4rem)
 }
 
 .mw4 {
-    max-width: 8rem
+    max-width: var(--size-4, 8rem)
 }
 
 .mw5 {
-    max-width: 16rem
+    max-width: var(--size-5, 16rem)
 }
 
 .mw6 {
-    max-width: 32rem
+    max-width: var(--size-6, 32rem)
 }
 
 .mw7 {
-    max-width: 48rem
+    max-width: var(--size-7, 48rem)
 }
 
 .mw8 {
-    max-width: 64rem
+    max-width: var(--size-8, 64rem)
 }
 
 .mw9 {
-    max-width: 96rem
+    max-width: var(--size-9, 96rem)
 }
 
 .mw-none {
@@ -6522,39 +6522,39 @@ img {
     }
 
     .mw1-s {
-        max-width: 1rem
+        max-width: var(--size-1, 1rem)
     }
 
     .mw2-s {
-        max-width: 2rem
+        max-width: var(--size-2, 2rem)
     }
 
     .mw3-s {
-        max-width: 4rem
+        max-width: var(--size-3, 4rem)
     }
 
     .mw4-s {
-        max-width: 8rem
+        max-width: var(--size-4, 8rem)
     }
 
     .mw5-s {
-        max-width: 16rem
+        max-width: var(--size-5, 16rem)
     }
 
     .mw6-s {
-        max-width: 32rem
+        max-width: var(--size-6, 32rem)
     }
 
     .mw7-s {
-        max-width: 48rem
+        max-width: var(--size-7, 48rem)
     }
 
     .mw8-s {
-        max-width: 64rem
+        max-width: var(--size-8, 64rem)
     }
 
     .mw9-s {
-        max-width: 96rem
+        max-width: var(--size-9, 96rem)
     }
 
     .mw-none-s {
@@ -6569,39 +6569,39 @@ img {
     }
 
     .mw1-m {
-        max-width: 1rem
+        max-width: var(--size-1, 1rem)
     }
 
     .mw2-m {
-        max-width: 2rem
+        max-width: var(--size-2, 2rem)
     }
 
     .mw3-m {
-        max-width: 4rem
+        max-width: var(--size-3, 4rem)
     }
 
     .mw4-m {
-        max-width: 8rem
+        max-width: var(--size-4, 8rem)
     }
 
     .mw5-m {
-        max-width: 16rem
+        max-width: var(--size-5, 16rem)
     }
 
     .mw6-m {
-        max-width: 32rem
+        max-width: var(--size-6, 32rem)
     }
 
     .mw7-m {
-        max-width: 48rem
+        max-width: var(--size-7, 48rem)
     }
 
     .mw8-m {
-        max-width: 64rem
+        max-width: var(--size-8, 64rem)
     }
 
     .mw9-m {
-        max-width: 96rem
+        max-width: var(--size-9, 96rem)
     }
 
     .mw-none-m {
@@ -6616,39 +6616,39 @@ img {
     }
 
     .mw1-l {
-        max-width: 1rem
+        max-width: var(--size-1, 1rem)
     }
 
     .mw2-l {
-        max-width: 2rem
+        max-width: var(--size-2, 2rem)
     }
 
     .mw3-l {
-        max-width: 4rem
+        max-width: var(--size-3, 4rem)
     }
 
     .mw4-l {
-        max-width: 8rem
+        max-width: var(--size-4, 8rem)
     }
 
     .mw5-l {
-        max-width: 16rem
+        max-width: var(--size-5, 16rem)
     }
 
     .mw6-l {
-        max-width: 32rem
+        max-width: var(--size-6, 32rem)
     }
 
     .mw7-l {
-        max-width: 48rem
+        max-width: var(--size-7, 48rem)
     }
 
     .mw8-l {
-        max-width: 64rem
+        max-width: var(--size-8, 64rem)
     }
 
     .mw9-l {
-        max-width: 96rem
+        max-width: var(--size-9, 96rem)
     }
 
     .mw-none-l {
@@ -6863,23 +6863,23 @@ img {
 }
 
 .w3 {
-    width: var(--size-3, 3rem)
+    width: var(--size-3, 4rem)
 }
 
 .w4 {
-    width: var(--size-4, 4rem)
+    width: var(--size-4, 8rem)
 }
 
 .w5 {
-    width: var(--size-5, 8rem)
+    width: var(--size-5, 16rem)
 }
 
 .w6 {
-    width: var(--size-6, 16rem)
+    width: var(--size-6, 32rem)
 }
 
 .w7 {
-    width: var(--size-7, 32rem)
+    width: var(--size-7, 48rem)
 }
 
 .w8 {
@@ -6936,23 +6936,23 @@ img {
     }
 
     .w3-s {
-        width: var(--size-3, 3rem)
+        width: var(--size-3, 4rem)
     }
 
     .w4-s {
-        width: var(--size-4, 4rem)
+        width: var(--size-4, 8rem)
     }
 
     .w5-s {
-        width: var(--size-5, 8rem)
+        width: var(--size-5, 16rem)
     }
 
     .w6-s {
-        width: var(--size-6, 16rem)
+        width: var(--size-6, 32rem)
     }
 
     .w7-s {
-        width: var(--size-7, 32rem)
+        width: var(--size-7, 48rem)
     }
 
     .w8-s {
@@ -7011,23 +7011,23 @@ img {
     }
 
     .w3-m {
-        width: var(--size-3, 3rem)
+        width: var(--size-3, 4rem)
     }
 
     .w4-m {
-        width: var(--size-4, 4rem)
+        width: var(--size-4, 8rem)
     }
 
     .w5-m {
-        width: var(--size-5, 8rem)
+        width: var(--size-5, 16rem)
     }
 
     .w6-m {
-        width: var(--size-6, 16rem)
+        width: var(--size-6, 32rem)
     }
 
     .w7-m {
-        width: var(--size-7, 32rem)
+        width: var(--size-7, 48rem)
     }
 
     .w8-m {
@@ -7086,23 +7086,23 @@ img {
     }
 
     .w3-l {
-        width: var(--size-3, 3rem)
+        width: var(--size-3, 4rem)
     }
 
     .w4-l {
-        width: var(--size-4, 4rem)
+        width: var(--size-4, 8rem)
     }
 
     .w5-l {
-        width: var(--size-5, 8rem)
+        width: var(--size-5, 16rem)
     }
 
     .w6-l {
-        width: var(--size-6, 16rem)
+        width: var(--size-6, 32rem)
     }
 
     .w7-l {
-        width: var(--size-7, 32rem)
+        width: var(--size-7, 48rem)
     }
 
     .w8-l {
