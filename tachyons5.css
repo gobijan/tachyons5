@@ -4840,6 +4840,11 @@ img {
     filter: blur(96px)
 }
 
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .grayscale-0 {
     filter: grayscale(0)
 }
