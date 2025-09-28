@@ -1,0 +1,248 @@
+@import "tachyons.css";
+
+
+html {
+  /* Typography - shared across themes */
+  /* --font-family-heading: "Albert Sans";
+  --font-family-body: "Albert Sans";
+  --font-family-mono: "Departure Mono", monospace !important; */
+
+  /* Light theme palette */
+  --brand-light: var(--indigo-5);
+  --text-light: var(--slate-gray-11);
+  --muted-light: var(--slate-gray-9);
+  --surface-0-light: var(--slate-gray-8);
+  --surface-1-light: var(--slate-gray-9);
+  --surface-2-light: var(--slate-gray-10);
+  --surface-3-light: var(--slate-gray-11);
+  --error-light: var(--red-5);
+  --success-light: var(--green-8);
+  --notice-light: var(--blue-5);
+  --surface-shadow-light: var(--shadow-11);
+  --shadow-strength-light: 2%;
+
+  /* Dark theme palette */
+  --brand-dark: var(--indigo-6);
+  --text-dark: var(--slate-gray-1);
+  --muted-dark: var(--slate-gray-4);
+  --surface-0-dark: var(--slate-gray-0);
+  --surface-1-dark: var(--slate-gray-1);
+  --surface-2-dark: var(--slate-gray-2);
+  --surface-3-dark: var(--slate-gray-3);
+  --error-dark: var(--red-6);
+  --success-dark: var(--green-8);
+  --notice-dark: var(--blue-6);
+  --surface-shadow-dark: var(--shadow-0);
+  --shadow-strength-dark: 80%;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Set light as default */
+  --brand: var(--brand-light);
+  --text: var(--text-light);
+  --muted: var(--muted-light);
+  --surface-0: var(--surface-0-light);
+  --surface-1: var(--surface-1-light);
+  --surface-2: var(--surface-2-light);
+  --surface-3: var(--surface-3-light);
+  --error: var(--error-light);
+  --success: var(--success-light);
+  --notice: var(--notice-light);
+  --surface-shadow: var(--surface-shadow-light);
+  --shadow-strength: var(--shadow-strength-light);
+}
+
+/* Automatic dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --brand: var(--brand-dark);
+    --text: var(--text-dark);
+    --muted: var(--muted-dark);
+    --surface-0: var(--surface-0-dark);
+    --surface-1: var(--surface-1-dark);
+    --surface-2: var(--surface-2-dark);
+    --surface-3: var(--surface-3-dark);
+    --error: var(--error-dark);
+    --success: var(--success-dark);
+    --notice: var(--notice-dark);
+    --surface-shadow: var(--surface-shadow-dark);
+    --shadow-strength: var(--shadow-strength-dark);
+  }
+}
+
+/* Manual light mode */
+[color-scheme="light"] {
+  color-scheme: light;
+
+  --brand: var(--brand-light);
+  --text: var(--text-light);
+  --muted: var(--muted-light);
+  --surface-0: var(--surface-0-light);
+  --surface-1: var(--surface-1-light);
+  --surface-2: var(--surface-2-light);
+  --surface-3: var(--surface-3-light);
+  --error: var(--error-light);
+  --success: var(--success-light);
+  --notice: var(--notice-light);
+  --surface-shadow: var(--surface-shadow-light);
+  --shadow-strength: var(--shadow-strength-light);
+
+}
+
+/* Manual dark mode */
+[color-scheme="dark"] {
+  color-scheme: dark;
+
+  --brand: var(--brand-dark);
+  --text: var(--text-dark);
+  --muted: var(--muted-dark);
+  --surface-0: var(--surface-0-dark);
+  --surface-1: var(--surface-1-dark);
+  --surface-2: var(--surface-2-dark);
+  --surface-3: var(--surface-3-dark);
+  --error: var(--error-dark);
+  --success: var(--success-dark);
+  --notice: var(--notice-dark);
+  --surface-shadow: var(--surface-shadow-dark);
+  --shadow-strength: var(--shadow-strength-dark);
+}
+
+/* Text colors */
+.brand { color: var(--brand); }
+.text { color: var(--text); }
+.muted { color: var(--muted); }
+.error { color: var(--error); }
+.success { color: var(--success); }
+.notice { color: var(--notice); }
+.surface-0 { color: var(--surface-0); }
+.surface-1 { color: var(--surface-1); }
+.surface-2 { color: var(--surface-2); }
+.surface-3 { color: var(--surface-3); }
+
+/* Background colors */
+.bg-brand { background-color: var(--brand); }
+.bg-surface-0 { background-color: var(--surface-0); }
+.bg-surface-1 { background-color: var(--surface-1); }
+.bg-surface-2 { background-color: var(--surface-2); }
+.bg-surface-3 { background-color: var(--surface-3); }
+.bg-error { background-color: var(--error); }
+.bg-success { background-color: var(--success); }
+.bg-notice { background-color: var(--notice); }
+
+/* Border colors */
+.b--brand { border-color: var(--brand); }
+.b--text { border-color: var(--text); }
+.b--muted { border-color: var(--muted); }
+.b--surface-0 { border-color: var(--surface-0); }
+.b--surface-1 { border-color: var(--surface-1); }
+.b--surface-2 { border-color: var(--surface-2); }
+.b--error { border-color: var(--error); }
+.b--success { border-color: var(--success); }
+.b--notice { border-color: var(--notice); }
+
+/* Hover states - text */
+.hover-brand:hover { color: var(--brand); }
+.hover-text:hover { color: var(--text); }
+.hover-muted:hover { color: var(--muted); }
+.hover-error:hover { color: var(--error); }
+.hover-success:hover { color: var(--success); }
+.hover-notice:hover { color: var(--notice); }
+
+/* Hover states - background */
+.hover-bg-brand:hover { background-color: var(--brand); }
+.hover-bg-surface-0:hover { background-color: var(--surface-0); }
+.hover-bg-surface-1:hover { background-color: var(--surface-1); }
+.hover-bg-surface-2:hover { background-color: var(--surface-2); }
+.hover-bg-surface-3:hover { background-color: var(--surface-3); }
+.hover-bg-error:hover { background-color: var(--error); }
+.hover-bg-success:hover { background-color: var(--success); }
+.hover-bg-notice:hover { background-color: var(--notice); }
+
+/* Hover states - border */
+.hover-b--brand:hover { border-color: var(--brand); }
+.hover-b--text:hover { border-color: var(--text); }
+.hover-b--muted:hover { border-color: var(--muted); }
+.hover-b--error:hover { border-color: var(--error); }
+.hover-b--success:hover { border-color: var(--success); }
+.hover-b--notice:hover { border-color: var(--notice); }
+
+/* Focus states - text */
+.focus-brand:focus { color: var(--brand); }
+.focus-text:focus { color: var(--text); }
+.focus-muted:focus { color: var(--muted); }
+.focus-error:focus { color: var(--error); }
+.focus-success:focus { color: var(--success); }
+.focus-notice:focus { color: var(--notice); }
+
+/* Focus states - background */
+.focus-bg-brand:focus { background-color: var(--brand); }
+.focus-bg-surface-0:focus { background-color: var(--surface-0); }
+.focus-bg-surface-1:focus { background-color: var(--surface-1); }
+.focus-bg-surface-2:focus { background-color: var(--surface-2); }
+.focus-bg-surface-3:focus { background-color: var(--surface-3); }
+.focus-bg-error:focus { background-color: var(--error); }
+.focus-bg-success:focus { background-color: var(--success); }
+.focus-bg-notice:focus { background-color: var(--notice); }
+
+/* Focus states - border */
+.focus-b--brand:focus { border-color: var(--brand); }
+.focus-b--text:focus { border-color: var(--text); }
+.focus-b--muted:focus { border-color: var(--muted); }
+.focus-b--error:focus { border-color: var(--error); }
+.focus-b--success:focus { border-color: var(--success); }
+.focus-b--notice:focus { border-color: var(--notice); }
+
+.rad-shadow {
+  border: 1px solid hsl(from var(--brand) h 10% 50% / 15%);
+  box-shadow: 0 1rem .5rem -.5rem;
+  box-shadow:
+    0 2.8px 2.2px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 3%)),
+    0 6.7px 5.3px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 1%)),
+    0 12.5px 10px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 2%)),
+    0 22.3px 17.9px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 2%)),
+    0 41.8px 33.4px hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 3%)),
+    0 100px 80px hsl(var(--surface-shadow) / var(--shadow-strength))
+  ;
+}
+
+/* Dialog */
+.dialog {
+  background: var(--surface-1);
+  width: 100%;
+  --dialog-mw: var(--size-6);
+  max-width: var(--dialog-mw);
+  border-radius: var(--border-radius-5);
+  padding: var(--spacing-4);
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Setup transition */
+  /*transition-behavior: allow-discrete;*/
+  transition-duration: var(--duration-1);
+  transition-property: display, overlay, opacity, transform;
+
+  &::backdrop {
+    transition-behavior: allow-discrete;
+    transition-duration: var(--duration-1);
+    transition-property: display, overlay, opacity;
+  }
+  /* Exit stage to */
+  & { opacity: 0; transform: 0.95; }
+  &::backdrop { opacity: 0; }
+  /* On stage */
+  &[open] { opacity: 1; transform: 100; }
+  &[open]::backdrop { opacity: 1; }
+  /* Enter stage from */
+  @starting-style {
+    &[open] { opacity: 0; transform: 0.95; }
+    &[open]::backdrop { opacity: 0; }
+  }
+}

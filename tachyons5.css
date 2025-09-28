@@ -15334,6 +15334,14 @@ img {
     background-color: var(--gray-0)
 }
 
+.fill-current {
+    fill: currentColor;
+}
+
+.stroke-current {
+    stroke: currentColor;
+}
+
 .strike {
     text-decoration: line-through
 }
