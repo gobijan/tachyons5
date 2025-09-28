@@ -538,7 +538,7 @@ summary {
     --easing-function-1:ease;
     --easing-function-2:ease-out;
     --easing-function-3:ease-in-out;
-    --easing-function-4:linear
+    --easing-function-4:linear;
 }
 
 .gradient-1 {
@@ -15338,7 +15338,7 @@ img {
     text-decoration: line-through
 }
 
-.stroke {
+.text-stroke {
     -webkit-text-stroke: 1px currentColor;
     -webkit-text-fill-color: transparent;
 }
