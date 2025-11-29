@@ -57,22 +57,24 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 
 **Responsive Card**
 ```html
-<article class="mw5 center bg-white br3 p3 p4-ns mv3 ba b--light">
-  <div class="tc">
-    <img src="avatar.jpg" class="br-100 h4 w4 dib ba b--light p2" alt="avatar">
-    <h1 class="f3 mb2">Jane Doe</h1>
-    <h2 class="f5 fw4 gray mt0">Developer</h2>
-  </div>
-</article>
+    <article class="mw5 w-100 center bg-white br3 p3 p4-m mv3 ba b--light f-body">
+        <div class="tc">
+            <img src="https://placehold.co/400x400/000000/FFF" class="br11 h4 w4 dib ba b--light p2" alt="avatar">
+
+            <h1 class="f5 mb2">Jane Doe</h1>
+
+            <h2 class="f3 fw4 gray mt0">Developer</h2>
+        </div>
+    </article>
 ```
 
 **CSS Grid Layout**
 ```html
 <div class="grid cols-1 cols-2-m cols-4-l g3">
-  <div class="p3 bg-light-gray">Item 1</div>
-  <div class="p3 bg-light-gray">Item 2</div>
-  <div class="p3 bg-light-gray">Item 3</div>
-  <div class="p3 bg-light-gray">Item 4</div>
+  <div class="p3">Item 1</div>
+  <div class="p3">Item 2</div>
+  <div class="p3">Item 3</div>
+  <div class="p3">Item 4</div>
 </div>
 ```
 
@@ -87,8 +89,8 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 
 **Button Styles**
 ```html
-<button class="f6 link dim br3 ph3 pv2 mb2 dib white bg-dark-blue bn pointer">
-  Click Me
+<button class="f3 fw5 link dim br3 py3 px2 mb2 dib white bg-blue-5 bn pointer f-body">
+    Click Me
 </button>
 ```
 
