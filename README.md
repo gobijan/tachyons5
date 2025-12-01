@@ -46,6 +46,7 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 | 📦 **Zero Build** | No npm, no webpack, no PostCSS — just drop it in |
 | 📱 **Responsive** | Mobile-first with media queries AND container queries |
 | 🔲 **CSS Grid** | Native grid support with `cols-*` and `g*` gap utilities |
+| 🌐 **Logical Properties** | RTL-ready with `start`/`end` instead of `left`/`right` |
 | 📦 **Container Queries** | Modern component-based responsive design |
 | ⚡ **~1900+ Utilities** | Spacing, typography, colors, flexbox, grid & more |
 | 🪶 **~29kb gzipped** | Lightweight and fast |
@@ -57,13 +58,13 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 
 **Responsive Card**
 ```html
-    <article class="mw5 w-100 center bg-white br3 p3 p4-m mv3 ba b--light f-body">
+    <article class="mw5 w-100 center bg-white br3 p3 p4-m mb3 ba b--light f-body">
         <div class="tc">
             <img src="https://placehold.co/400x400/000000/FFF" class="br11 h4 w4 dib ba b--light p2" alt="avatar">
 
-            <h1 class="f5 mb2">Jane Doe</h1>
+            <h1 class="f5 mbe2">Jane Doe</h1>
 
-            <h2 class="f3 fw4 gray mt0">Developer</h2>
+            <h2 class="f3 fw4 gray mbs0">Developer</h2>
         </div>
     </article>
 ```
@@ -89,7 +90,7 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 
 **Button Styles**
 ```html
-<button class="f3 fw5 link dim br3 py3 px2 mb2 dib white bg-blue-5 bn pointer f-body">
+<button class="f3 fw5 link dim br3 pb3 pi2 mbe2 dib white bg-blue-5 bn pointer f-body">
     Click Me
 </button>
 ```
@@ -98,21 +99,31 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 
 ## 🎯 Class Reference (Cheat Sheet)
 
-### Spacing
-| Class | Property | Scale |
-|-------|----------|-------|
-| `p0` - `p9` | padding: all | 0 - 256px |
-| `m0` - `m9` | margin: all | 0 - 256px |
-| `pt0`, `pr0`, `pb0`, `pl0` | padding: directional | top, right, bottom, left |
-| `mt0`, `mr0`, `mb0`, `ml0` | margin: directional | top, right, bottom, left |
-| `g0` - `g7` | gap | 0 - 256px |
+### Spacing (Logical Properties)
+| Class | Property | Description |
+|-------|----------|-------------|
+| `p0` - `p9` | padding | all sides |
+| `m0` - `m9` | margin | all sides |
+| `pis0` - `pis9` | padding-inline-start | start edge (left in LTR) |
+| `pie0` - `pie9` | padding-inline-end | end edge (right in LTR) |
+| `pbs0` - `pbs9` | padding-block-start | top |
+| `pbe0` - `pbe9` | padding-block-end | bottom |
+| `pi0` - `pi9` | padding-inline | left & right |
+| `pb0` - `pb9` | padding-block | top & bottom |
+| `mis0` - `mis9` | margin-inline-start | start edge |
+| `mie0` - `mie9` | margin-inline-end | end edge |
+| `mbs0` - `mbs9` | margin-block-start | top |
+| `mbe0` - `mbe9` | margin-block-end | bottom |
+| `mi0` - `mi9` | margin-inline | left & right |
+| `mb0` - `mb9` | margin-block | top & bottom |
+| `g0` - `g7` | gap | grid/flex gap |
 
 ### Typography
 | Class | Description |
 |-------|-------------|
 | `f1` - `f7` | Font sizes (3rem → 0.75rem) |
 | `fw1` - `fw9` | Font weights |
-| `tl`, `tc`, `tr`, `tj` | Text align |
+| `ts`, `tc`, `te`, `tj` | Text align (start, center, end, justify) |
 | `ttc`, `ttu`, `ttl` | Text transform |
 | `lh-solid`, `lh-title`, `lh-copy` | Line heights |
 
@@ -122,6 +133,29 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 | `blue`, `red`, `green`, `yellow`... | Text colors |
 | `bg-blue`, `bg-red`, `bg-green`... | Background colors |
 | `b--blue`, `b--red`... | Border colors |
+
+### Positioning (Logical Properties)
+| Class | Property |
+|-------|----------|
+| `start-0`, `start-1`, `start-2` | inset-inline-start |
+| `end-0`, `end-1`, `end-2` | inset-inline-end |
+| `block-start-0`, `block-start-1` | inset-block-start (top) |
+| `block-end-0`, `block-end-1` | inset-block-end (bottom) |
+
+### Borders (Logical Properties)
+| Class | Property |
+|-------|----------|
+| `bis` | border-inline-start |
+| `bie` | border-inline-end |
+| `bbs` | border-block-start |
+| `bbe` | border-block-end |
+
+### Float (Logical Properties)
+| Class | Property |
+|-------|----------|
+| `fis` | float: inline-start |
+| `fie` | float: inline-end |
+| `fn` | float: none |
 
 ### Flexbox & Grid
 | Class | Property |
@@ -184,6 +218,7 @@ Tachyons 5 was originally designed by [Adam Morse](https://github.com/mrmrs) but
 - ✅ Container Queries for component-based responsive design
 - ✅ CSS Grid utilities (`grid`, `cols-*`)
 - ✅ Simplified class names (`p4` instead of `pa4`)
+- ✅ CSS Logical Properties for RTL/internationalization support
 - ✅ Modern CSS features (aspect-ratio, gap, etc.)
 - ✅ No build step required
 - ✅ Actively maintained
