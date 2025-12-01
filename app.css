@@ -958,3 +958,94 @@
     width: 6rem;
     border-radius: var(--border-radius-2);
 }
+
+/* ==========================================================================
+   TABLE
+   ==========================================================================
+
+   Styled table component. Just add .table to a <table> element.
+
+   Modifiers:
+   - .table--striped: Alternating row colors
+   - .table--hover: Highlight rows on hover
+   - .table--compact: Reduced padding
+   - .table--bordered: Borders on all cells
+
+*/
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: inherit;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: var(--spacing-3) var(--spacing-4);
+    vertical-align: top;
+    border-bottom: 1px solid var(--surface-1);
+}
+
+.table th {
+    font-weight: 600;
+    color: var(--text);
+    background-color: var(--surface-1);
+    border-bottom: 2px solid var(--surface-0);
+}
+
+.table td {
+    color: var(--text);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Striped rows */
+.table--striped tbody tr:nth-child(odd) {
+    background-color: var(--surface-2);
+}
+
+.table--striped tbody tr:nth-child(even) {
+    background-color: var(--surface-3);
+}
+
+/* Hover effect */
+.table--hover tbody tr {
+    transition: background-color var(--duration-0) var(--easing-function-1);
+}
+
+.table--hover tbody tr:hover {
+    background-color: var(--surface-1);
+}
+
+/* Compact variant */
+.table--compact th,
+.table--compact td {
+    padding: var(--spacing-2) var(--spacing-3);
+}
+
+/* Bordered variant */
+.table--bordered th,
+.table--bordered td {
+    border: 1px solid var(--surface-1);
+}
+
+.table--bordered th {
+    border-bottom: 2px solid var(--surface-0);
+}
+
+/* Numeric/monospace cells */
+.table td.numeric,
+.table th.numeric {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Responsive wrapper for horizontal scrolling */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
