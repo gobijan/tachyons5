@@ -912,6 +912,17 @@
             <a href="https://github.com/gobijan/tachyons5" class="brand hover-underline">View on GitHub</a>
         </p>
     </footer>
+
+    <script>
+        // Close drawer/dialog when clicking on backdrop (outside content)
+        document.querySelectorAll('.drawer, .dialog').forEach(dialog => {
+            dialog.addEventListener('click', (e) => {
+                if (e.target === dialog) {
+                    dialog.close();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
