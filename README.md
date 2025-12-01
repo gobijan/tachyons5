@@ -167,6 +167,15 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 | `justify-center`, `justify-between`... | justify-content |
 | `items-center`, `items-start`... | align-items |
 
+### Shadows (OpenProps-inspired)
+| Class | Description |
+|-------|-------------|
+| `shadow-1` | Subtle shadow for tight UI elements |
+| `shadow-2` | Light shadow for cards |
+| `shadow-3` | Medium shadow for dropdowns/popovers |
+| `shadow-4` | Heavy shadow for modals/dialogs |
+| `inner-shadow-1` - `inner-shadow-4` | Inset shadows with highlight |
+
 ### Container Queries
 | Class | Property |
 |-------|----------|
