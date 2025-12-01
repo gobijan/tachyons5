@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="tachyons5.css">
+    <meta charset="UTF-8">
+
+    <style>
+        .dropdown-menu {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.15s ease, transform 0.15s ease, display 0.15s allow-discrete;
+            position-anchor: var(--anchor);
+            position-try-fallbacks: flip-block, flip-inline;
+            top: anchor(bottom);
+            left: anchor(left);
+            margin: 0;
+            position: absolute;
+        }
+
+        @starting-style {
+
+            .dropdown-menu:popover-open {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+        }
+
+        .dropdown-menu:not(:popover-open) {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+
+<body class="p4 f-body antialiased bg-gray-9">
+    <!-- Dropdown 1 -->
+    <div class="dib">
+        <button popovertarget="dropdown-1" class="
+          button-reset pi4 bn pb3 br11 bg-white pointer fw5 f3 trans-bg
+          hover-bg-gray-10
+        " style="anchor-name: --anchor-1;" aria-haspopup="menu" aria-controls="dropdown-1">
+            Actions ▾
+        </button>
+
+        <div id="dropdown-1" popover class="dropdown-menu p3 bg-white box-shadow-5 br4 f3 fw5 bn"
+            style="--anchor: --anchor-1;" role="menu" aria-label="Actions">
+            <a href="#" role="menuitem" class="
+            db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+            active-dim
+          ">
+                Edit
+            </a>
+
+            <a href="#" role="menuitem" class="
+            db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+            active-dim
+          ">
+                Duplicate
+            </a>
+
+            <a href="#" role="menuitem" class="
+            db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+            active-dim
+          ">
+                Delete
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
