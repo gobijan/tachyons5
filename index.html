@@ -1,45 +1,592 @@
 <!DOCTYPE html>
 
-<html lang="en" class="bg-surface-1 container-inline">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Tachyons 5 — Component Examples</title>
 
     <link rel="stylesheet" href="tachyons5.css">
 </head>
 
-<body class="m5 antialiased grid cols-1 g5">
-    <div class="
-        p4 bg-slate-gray-3 white br3 box-shadow-border-3 box-shadow-7 f-body flex
-        items-center justify-center dim
-      ">
-        <h1 class="f3 f4-l">Hello Tachyons 5!</h1>
-    </div>
+<body class="p4 p5-l antialiased bg-surface-1 text f-body">
+    <header class="mb5">
+        <h1 class="f6 f7-l fw7 mb2 text-balance">⚡ Tachyons 5</h1>
 
-    <div class="
-        items-center justify-center active-dim hover-surface-2
-        p4 bg-surface-2 br3 f-body flex
-      ">
-        <h1 class="f3 f4-l">@gobijan</h1>
-    </div>
+        <p class="f4 muted">
+            Functional CSS for humans. Zero build. Pure CSS. Just works.
+        </p>
+    </header>
 
-    <button class="f3 fw5 link dim br3 pb4 pi2 mb2 dib white bg-blue-5 bn pointer f-body">
-        Click Me
-    </button>
+    <main class="grid cols-1 g5">
+        <!-- Theme Toggle -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">🌓 Dark Mode Toggle</h2>
 
-    <article class="mw5 w-100 center bg-white br3 p3 p4-ns mv3 f-body">
-        <div class="tc">
-            <img src="https://placehold.co/400x400/000000/FFF" class="br11 h4 w4 dib ba b--light p2" alt="avatar">
+            <p class="muted mb3 f3">
+                Click to switch between light and dark themes.
+            </p>
 
-            <h1 class="f5 mb2">Jane Doe</h1>
+            <div class="flex g3 items-center">
+                <button onclick="document.documentElement.setAttribute('color-scheme', 'light')" class="
+              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+              trans-bg hover-bg-surface-3 focus-ring
+            ">
+                    ☀️ Light
+                </button>
 
-            <h2 class="f3 fw4 gray mt0">Developer</h2>
-        </div>
-    </article>
+                <button onclick="document.documentElement.setAttribute('color-scheme', 'dark')" class="
+              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+              trans-bg hover-bg-surface-3 focus-ring
+            ">
+                    🌙 Dark
+                </button>
+
+                <button onclick="document.documentElement.removeAttribute('color-scheme')" class="
+              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+              trans-bg hover-bg-surface-3 focus-ring
+            ">
+                    💻 System
+                </button>
+            </div>
+        </section>
+
+        <!-- Dropdown Menus -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">📋 Dropdown Menus</h2>
+
+            <p class="muted mb3 f3">
+                Using the Popover API with CSS anchor positioning.
+            </p>
+
+            <div class="flex g3 flex-wrap">
+                <!-- Dropdown 1 -->
+                <div class="dib">
+                    <button popovertarget="dropdown-1" class="
+                button-reset pi4 bn pb3 br11 bg-brand surface-0 pointer fw5
+                f3 trans-bg hover-o-80 focus-ring
+              " style="anchor-name: --anchor-1;" aria-haspopup="menu" aria-controls="dropdown-1">
+                        Actions ▾
+                    </button>
+
+                    <div id="dropdown-1" popover class="dropdown-menu p3 bg-surface-0 shadow-3 br4 f3 fw5 bn"
+                        style="--anchor: --anchor-1;" role="menu" aria-label="Actions">
+                        <a href="#" role="menuitem" class="
+                  db p3 no-underline text hover-bg-surface-2 trans-bg br3
+                  active-dim
+                ">
+                            Edit
+                        </a>
+
+                        <a href="#" role="menuitem" class="
+                  db p3 no-underline text hover-bg-surface-2 trans-bg br3
+                  active-dim
+                ">
+                            Duplicate
+                        </a>
+
+                        <a href="#" role="menuitem" class="
+                  db p3 no-underline error hover-bg-surface-2 trans-bg br3
+                  active-dim
+                ">
+                            Delete
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dropdown 2 - Right aligned -->
+                <div class="dib">
+                    <button popovertarget="dropdown-2" class="
+                button-reset pi4 bn pb3 br11 bg-surface-2 text pointer fw5
+                f3 trans-bg hover-bg-surface-3 focus-ring
+              " style="anchor-name: --anchor-2;" aria-haspopup="menu" aria-controls="dropdown-2">
+                        Right Aligned ▾
+                    </button>
+
+                    <div id="dropdown-2" popover class="
+                dropdown-menu dropdown-menu--end p3 bg-surface-0 shadow-3
+                br4 f3 fw5 bn
+              " style="--anchor: --anchor-2;" role="menu" aria-label="Options">
+                        <a href="#" role="menuitem" class="
+                  db p3 no-underline text hover-bg-surface-2 trans-bg br3
+                  active-dim
+                ">
+                            Option 1
+                        </a>
+
+                        <a href="#" role="menuitem" class="
+                  db p3 no-underline text hover-bg-surface-2 trans-bg br3
+                  active-dim
+                ">
+                            Option 2
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dialog / Modal -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">🪟 Dialog / Modal</h2>
+
+            <p class="muted mb3 f3">
+                Native <code class="bg-surface-2 pi2 br2">&lt;dialog&gt;</code>
+                element with smooth animations.
+            </p>
+
+            <div class="flex g3 flex-wrap">
+                <button onclick="document.getElementById('dialog-sm').showModal()" class="
+              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+              trans-bg hover-bg-surface-3 focus-ring
+            ">
+                    Small Dialog
+                </button>
+
+                <button onclick="document.getElementById('dialog-default').showModal()" class="
+              button-reset pi4 pb3 br3 bg-brand surface-0 pointer fw5 f3
+              trans-bg hover-o-80 focus-ring
+            ">
+                    Default Dialog
+                </button>
+
+                <button onclick="document.getElementById('dialog-lg').showModal()" class="
+              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+              trans-bg hover-bg-surface-3 focus-ring
+            ">
+                    Large Dialog
+                </button>
+            </div>
+
+            <!-- Small Dialog -->
+            <dialog id="dialog-sm" class="dialog dialog--sm">
+                <h3 class="f4 fw6 mb2">Small Dialog</h3>
+
+                <p class="muted mb4">
+                    This is a compact dialog for quick confirmations.
+                </p>
+
+                <div class="flex g2 justify-end">
+                    <button onclick="this.closest('dialog').close()" class="
+                button-reset pi3 pb2 br2 bg-surface-2 text pointer f3
+                trans-bg hover-bg-surface-3
+              ">
+                        Cancel
+                    </button>
+
+                    <button onclick="this.closest('dialog').close()" class="
+                button-reset pi3 pb2 br2 bg-brand surface-0 pointer f3
+                trans-bg hover-o-80
+              ">
+                        Confirm
+                    </button>
+                </div>
+            </dialog>
+
+            <!-- Default Dialog -->
+            <dialog id="dialog-default" class="dialog">
+                <h3 class="f5 fw6 mb2">Default Dialog</h3>
+
+                <p class="muted mb3">
+                    This is the default sized dialog. It's great for forms,
+                    confirmations, and general content.
+                </p>
+
+                <p class="text mb4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+
+                <div class="flex g2 justify-end">
+                    <button onclick="this.closest('dialog').close()" class="
+                button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+                trans-bg hover-bg-surface-3
+              ">
+                        Close
+                    </button>
+                </div>
+            </dialog>
+
+            <!-- Large Dialog -->
+            <dialog id="dialog-lg" class="dialog dialog--lg">
+                <h3 class="f5 fw6 mb2">Large Dialog</h3>
+
+                <p class="muted mb4">
+                    This is a larger dialog suitable for detailed content, tables, or
+                    complex forms.
+                </p>
+
+                <div class="grid cols-2 g3 mb4">
+                    <div class="bg-surface-1 p3 br2">Column 1</div>
+                    <div class="bg-surface-1 p3 br2">Column 2</div>
+                </div>
+
+                <div class="flex g2 justify-end">
+                    <button onclick="this.closest('dialog').close()" class="
+                button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+                trans-bg hover-bg-surface-3
+              ">
+                        Close
+                    </button>
+                </div>
+            </dialog>
+        </section>
+
+        <!-- Form Components -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">🎛️ Form Components</h2>
+
+            <p class="muted mb4 f3">
+                Themed form elements that respect light/dark mode.
+            </p>
+
+            <div class="grid cols-1 cols-2-m g4">
+                <!-- Text Inputs -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Text Inputs</h3>
+
+                    <div class="grid cols-1 g3">
+                        <input type="text" class="input" placeholder="Default input">
+
+                        <input type="text" class="input input--error" placeholder="Error state">
+
+                        <input type="text" class="input input--success" placeholder="Success state">
+
+                        <input type="text" class="input" disabled placeholder="Disabled input">
+                    </div>
+                </div>
+
+                <!-- Checkboxes & Radios -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Checkboxes & Radios</h3>
+
+                    <div class="grid cols-1 g3">
+                        <label class="flex items-center g2 pointer">
+                            <input type="checkbox" class="checkbox" checked>
+                            <span>Styled Checkbox</span>
+                        </label>
+
+                        <label class="flex items-center g2 pointer">
+                            <input type="checkbox" class="checkbox">
+                            <span>Unchecked Checkbox</span>
+                        </label>
+
+                        <label class="flex items-center g2 pointer">
+                            <input type="radio" name="radio-group" class="radio" checked>
+
+                            <span>Radio Option 1</span>
+                        </label>
+
+                        <label class="flex items-center g2 pointer">
+                            <input type="radio" name="radio-group" class="radio">
+                            <span>Radio Option 2</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Switches -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Toggle Switches</h3>
+
+                    <div class="grid cols-1 g3">
+                        <label class="flex items-center g2 pointer">
+                            <input type="checkbox" class="switch" checked>
+                            <span>Notifications</span>
+                        </label>
+
+                        <label class="flex items-center g2 pointer">
+                            <input type="checkbox" class="switch">
+                            <span>Auto-save</span>
+                        </label>
+
+                        <label class="flex items-center g2 pointer o-50">
+                            <input type="checkbox" class="switch" disabled>
+                            <span>Disabled Switch</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Accent Colors -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Native Accent Colors</h3>
+
+                    <div class="grid cols-1 g3">
+                        <label class="flex items-center g2 pointer">
+                            <input type="checkbox" class="accent-brand" checked>
+                            <span>Brand accent</span>
+                        </label>
+
+                        <label class="flex items-center g2 pointer">
+                            <input type="checkbox" class="accent-success" checked>
+                            <span>Success accent</span>
+                        </label>
+
+                        <label class="flex items-center g2 pointer">
+                            <input type="checkbox" class="accent-error" checked>
+                            <span>Error accent</span>
+                        </label>
+
+                        <input type="range" class="accent-brand w-100" min="0" max="100" value="60">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Focus Rings -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">🎯 Focus Rings</h2>
+
+            <p class="muted mb3 f3">
+                Accessible focus styles using
+                <code class="bg-surface-2 pi2 br2">:focus-visible</code>. Tab through
+                these buttons to see.
+            </p>
+
+            <div class="flex g3 flex-wrap">
+                <button class="
+              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+              focus-ring
+            ">
+                    Brand Focus
+                </button>
+
+                <button class="
+              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+              focus-ring-error
+            ">
+                    Error Focus
+                </button>
+
+                <button class="
+              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
+              focus-ring-success
+            ">
+                    Success Focus
+                </button>
+
+                <button class="
+              button-reset pi4 pb3 br3 bg-brand surface-0 pointer fw5 f3
+              focus-ring-inset
+            ">
+                    Inset Focus
+                </button>
+            </div>
+        </section>
+
+        <!-- Scroll Snap -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">📜 Scroll Snap</h2>
+            <p class="muted mb3 f3">Horizontal scroll snap with smooth behavior.</p>
+
+            <div class="scroll-snap-x flex g3 pb3 scrollbar-thin">
+                <div class="
+              flex-none w5 h4 bg-brand br3 flex items-center justify-center
+              surface-0 fw6 snap-center
+            ">
+                    1
+                </div>
+
+                <div class="
+              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              justify-center text fw6 snap-center
+            ">
+                    2
+                </div>
+
+                <div class="
+              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              justify-center text fw6 snap-center
+            ">
+                    3
+                </div>
+
+                <div class="
+              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              justify-center text fw6 snap-center
+            ">
+                    4
+                </div>
+
+                <div class="
+              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              justify-center text fw6 snap-center
+            ">
+                    5
+                </div>
+
+                <div class="
+              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              justify-center text fw6 snap-center
+            ">
+                    6
+                </div>
+
+                <div class="
+              flex-none w5 h4 bg-brand br3 flex items-center justify-center
+              surface-0 fw6 snap-center
+            ">
+                    7
+                </div>
+            </div>
+        </section>
+
+        <!-- Skeleton Loading -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">💀 Skeleton Loading</h2>
+            <p class="muted mb4 f3">Placeholder loading animations for content.</p>
+
+            <div class="grid cols-1 cols-2-m g4">
+                <!-- Pulse skeleton -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Pulse Animation</h3>
+
+                    <div class="flex g3 items-start">
+                        <div class="skeleton skeleton-avatar"></div>
+
+                        <div class="flex-auto">
+                            <div class="skeleton skeleton-text w-80"></div>
+                            <div class="skeleton skeleton-text w-60"></div>
+                            <div class="skeleton skeleton-text"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shimmer skeleton -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Shimmer Animation</h3>
+
+                    <div class="flex g3 items-start">
+                        <div class="skeleton-shimmer skeleton-avatar"></div>
+
+                        <div class="flex-auto">
+                            <div class="skeleton-shimmer skeleton-text w-80"></div>
+                            <div class="skeleton-shimmer skeleton-text w-60"></div>
+                            <div class="skeleton-shimmer skeleton-text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Text Utilities -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">✍️ Text Utilities</h2>
+            <p class="muted mb4 f3">Modern text wrapping and typography.</p>
+
+            <div class="grid cols-1 cols-2-m g4">
+                <div>
+                    <h3 class="f3 fw6 mb2 muted">text-balance</h3>
+
+                    <p class="f4 text-balance bg-surface-1 p3 br2">
+                        This heading text is balanced across multiple lines for better
+                        visual appearance.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="f3 fw6 mb2 muted">text-pretty</h3>
+
+                    <p class="f3 text-pretty bg-surface-1 p3 br2">
+                        This paragraph uses text-pretty to prevent orphans and widows,
+                        making the text flow more naturally at the end of lines.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shadows -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">🌑 Shadows</h2>
+
+            <p class="muted mb4 f3">
+                OpenProps-inspired shadow system with 4 levels.
+            </p>
+
+            <div class="grid cols-2 cols-4-m g4">
+                <div class="bg-surface-0 p4 br3 shadow-1 tc">
+                    <p class="f2 muted">shadow-1</p>
+                </div>
+
+                <div class="bg-surface-0 p4 br3 shadow-2 tc">
+                    <p class="f2 muted">shadow-2</p>
+                </div>
+
+                <div class="bg-surface-0 p4 br3 shadow-3 tc">
+                    <p class="f2 muted">shadow-3</p>
+                </div>
+
+                <div class="bg-surface-0 p4 br3 shadow-4 tc">
+                    <p class="f2 muted">shadow-4</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Semantic Colors -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">🎨 Semantic Colors</h2>
+
+            <p class="muted mb4 f3">
+                Theme-aware color tokens that adapt to light/dark mode.
+            </p>
+
+            <div class="grid cols-2 cols-4-m g3">
+                <div class="bg-brand p3 br2 surface-0 tc f3 fw5">brand</div>
+                <div class="bg-error p3 br2 surface-0 tc f3 fw5">error</div>
+                <div class="bg-success p3 br2 surface-0 tc f3 fw5">success</div>
+                <div class="bg-notice p3 br2 surface-0 tc f3 fw5">notice</div>
+
+                <div class="bg-surface-0 p3 br2 text tc f3 fw5 ba b--surface-2">
+                    surface-0
+                </div>
+
+                <div class="bg-surface-1 p3 br2 text tc f3 fw5">surface-1</div>
+                <div class="bg-surface-2 p3 br2 text tc f3 fw5">surface-2</div>
+                <div class="bg-surface-3 p3 br2 text tc f3 fw5">surface-3</div>
+            </div>
+        </section>
+
+        <!-- Profile Card (Original Example) -->
+        <section class="bg-surface-0 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">👤 Profile Card</h2>
+            <p class="muted mb4 f3">Classic Tachyons component example.</p>
+
+            <article class="mw5 bg-surface-1 br3 p4 shadow-2">
+                <div class="tc">
+                    <img src="https://placehold.co/400x400/6366f1/FFF?text=JD" class="br11 h4 w4 dib ba b--surface-2 p1"
+                        alt="avatar">
+
+                    <h3 class="f5 mb1 text">Jane Doe</h3>
+
+                    <p class="f3 fw4 muted mt0">Developer</p>
+
+                    <div class="flex g2 justify-center mt3">
+                        <button class="
+                  button-reset pi3 pb2 br2 bg-brand surface-0 pointer f2
+                  trans-bg hover-o-80
+                ">
+                            Follow
+                        </button>
+
+                        <button class="
+                  button-reset pi3 pb2 br2 bg-surface-2 text pointer f2
+                  trans-bg hover-bg-surface-3
+                ">
+                            Message
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="mt5 pt4 bt b--surface-2 tc muted f2 print-hidden">
+        <p>
+            Made with ⚡ Tachyons 5 —
+            <a href="https://github.com/gobijan/tachyons5" class="brand hover-underline">View on GitHub</a>
+        </p>
+    </footer>
 </body>
 
 </html>

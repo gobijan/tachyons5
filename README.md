@@ -49,6 +49,9 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 | 🔲 **CSS Grid** | Native grid support with `cols-*` and `g*` gap utilities |
 | 🌐 **Logical Properties** | RTL-ready with `start`/`end` instead of `left`/`right` |
 | 📦 **Container Queries** | Modern component-based responsive design |
+| 🎛️ **Form Components** | Themed inputs, checkboxes, radios, and switches |
+| 🪟 **Dialog & Dropdown** | Native `<dialog>` and Popover API components |
+| ♿ **Accessibility** | Focus rings, reduced motion, selection colors |
 | ⚡ **~1900+ Utilities** | Spacing, typography, colors, flexbox, grid & more |
 | 🪶 **~29kb gzipped** | Lightweight and fast |
 | 🔧 **Maintained** | Actively maintained and updated |
@@ -214,6 +217,130 @@ A dropdown menu component using the Popover API with CSS anchor positioning and 
 | `dropdown-menu--end` | Right-align dropdown to anchor |
 | `dropdown-menu--top` | Position dropdown above anchor |
 
+### Dialog / Modal Component
+
+A dialog component using the native `<dialog>` element with smooth animations.
+
+```html
+<dialog class="dialog">
+    <h2>Modal Title</h2>
+    <p>Modal content goes here.</p>
+    <button onclick="this.closest('dialog').close()">Close</button>
+</dialog>
+
+<button onclick="document.querySelector('.dialog').showModal()">
+    Open Modal
+</button>
+```
+
+| Class | Description |
+|-------|-------------|
+| `dialog` | Base dialog with backdrop and animations |
+| `dialog--sm` | Small dialog (max-width: 20rem) |
+| `dialog--lg` | Large dialog (max-width: 48rem) |
+| `dialog--full` | Full-screen dialog |
+
+### Form Components
+
+Themed form elements that respect light/dark mode.
+
+```html
+<input type="text" class="input" placeholder="Text input">
+<input type="text" class="input input--error" placeholder="Error state">
+
+<input type="checkbox" class="checkbox">
+<input type="radio" class="radio" name="group">
+<input type="checkbox" class="switch">
+```
+
+| Class | Description |
+|-------|-------------|
+| `input` | Styled text input |
+| `input--error` | Error state for inputs |
+| `input--success` | Success state for inputs |
+| `checkbox` | Styled checkbox |
+| `radio` | Styled radio button |
+| `switch` | Toggle switch |
+
+### Focus Ring Utilities
+
+Accessible focus styles using `:focus-visible`.
+
+| Class | Description |
+|-------|-------------|
+| `focus-ring` | Brand color focus ring with offset |
+| `focus-ring-inset` | Inset focus ring |
+| `focus-ring-error` | Error color focus ring |
+| `focus-ring-success` | Success color focus ring |
+
+### Scroll Utilities
+
+| Class | Description |
+|-------|-------------|
+| `scroll-smooth` | Smooth scroll behavior |
+| `scroll-snap-x` | Horizontal scroll snap (mandatory) |
+| `scroll-snap-y` | Vertical scroll snap (mandatory) |
+| `snap-start`, `snap-center`, `snap-end` | Snap alignment |
+| `scroll-p1` - `scroll-p5` | Scroll padding |
+| `scrollbar-hidden` | Hide scrollbar |
+| `scrollbar-thin` | Thin scrollbar |
+
+### Accent Color
+
+For native form elements (checkboxes, radios, range, progress).
+
+| Class | Description |
+|-------|-------------|
+| `accent-brand` | Brand accent color |
+| `accent-error` | Error accent color |
+| `accent-success` | Success accent color |
+| `accent-notice` | Notice accent color |
+
+### Skeleton / Loading States
+
+```html
+<div class="skeleton skeleton-avatar"></div>
+<div class="skeleton-shimmer skeleton-text"></div>
+```
+
+| Class | Description |
+|-------|-------------|
+| `skeleton` | Pulsing skeleton animation |
+| `skeleton-shimmer` | Shimmer effect skeleton |
+| `skeleton-text` | Text line placeholder |
+| `skeleton-avatar` | Avatar placeholder (3rem circle) |
+| `skeleton-button` | Button placeholder |
+| `skeleton-circle` | Circular skeleton |
+
+### Text Wrap Utilities
+
+| Class | Description |
+|-------|-------------|
+| `text-balance` | Balance text across lines |
+| `text-pretty` | Prevent orphans/widows |
+| `text-nowrap` | No wrapping |
+| `hyphens-auto` | Automatic hyphenation |
+| `break-word` | Break long words |
+
+### Print Utilities
+
+| Class | Description |
+|-------|-------------|
+| `print-hidden` | Hide when printing |
+| `print-only` | Show only when printing |
+| `print-break-before` | Page break before |
+| `print-break-after` | Page break after |
+| `print-plain` | Remove backgrounds/shadows for print |
+
+### Accessibility
+
+| Feature | Description |
+|---------|-------------|
+| `::selection` | Themed text selection colors |
+| `@media (prefers-reduced-motion)` | Disables animations automatically |
+| `motion-reduce` | Force disable animations on element |
+| `motion-safe` | Override reduced motion preference |
+
 ### Container Queries
 | Class | Property |
 |-------|----------|
@@ -285,8 +412,14 @@ Tachyons 5 was originally designed by [Adam Morse](https://github.com/mrmrs) but
 - ✅ Simplified class names (`p4` instead of `pa4`)
 - ✅ CSS Logical Properties for RTL/internationalization support
 - ✅ OpenProps-inspired shadow system
-- ✅ Dropdown menu component with Popover API & anchor positioning
-- ✅ Modern CSS features (aspect-ratio, gap, etc.)
+- ✅ Dropdown & Dialog components with Popover API
+- ✅ Form components (inputs, checkboxes, switches)
+- ✅ Accessibility (focus rings, reduced motion, selection)
+- ✅ Scroll snap & smooth scrolling utilities
+- ✅ Skeleton loading animations
+- ✅ Text wrap utilities (balance, pretty)
+- ✅ Print styles
+- ✅ Modern CSS features (aspect-ratio, gap, accent-color, etc.)
 - ✅ No build step required
 - ✅ Actively maintained
 
