@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="tachyons5.css">
 </head>
 
-<body class="p4 p5-l antialiased bg-surface-1 text f-body">
+<body class="p4 p5-l antialiased bg-surface-0 text f-body">
     <header class="mb5">
         <h1 class="f6 f7-l fw7 mb2 text-balance">⚡ Tachyons 5</h1>
 
@@ -23,8 +23,8 @@
 
     <main class="grid cols-1 g5">
         <!-- Theme Toggle -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
-            <h2 class="f5 fw6 mb3">🌓 Dark Mode Toggle</h2>
+        <section class="bg-surface-1 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3 text">🌓 Dark Mode Toggle</h2>
 
             <p class="muted mb3 f3">
                 Click to switch between light and dark themes.
@@ -55,7 +55,7 @@
         </section>
 
         <!-- Dropdown Menus -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2">
             <h2 class="f5 fw6 mb3">📋 Dropdown Menus</h2>
 
             <p class="muted mb3 f3">
@@ -72,7 +72,7 @@
                         Actions ▾
                     </button>
 
-                    <div id="dropdown-1" popover class="dropdown-menu p3 bg-surface-0 shadow-3 br4 f3 fw5 bn"
+                    <div id="dropdown-1" popover class="dropdown-menu p3 bg-surface-3 shadow-3 br4 f3 fw5 bn"
                         style="--anchor: --anchor-1;" role="menu" aria-label="Actions">
                         <a href="#" role="menuitem" class="
                   db p3 no-underline text hover-bg-surface-2 trans-bg br3
@@ -129,7 +129,7 @@
         </section>
 
         <!-- Dialog / Modal -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2">
             <h2 class="f5 fw6 mb3">🪟 Dialog / Modal</h2>
 
             <p class="muted mb3 f3">
@@ -235,7 +235,7 @@
         </section>
 
         <!-- Form Components -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2">
             <h2 class="f5 fw6 mb3">🎛️ Form Components</h2>
 
             <p class="muted mb4 f3">
@@ -334,8 +334,81 @@
             </div>
         </section>
 
+        <!-- Buttons -->
+        <section class="bg-surface-1 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">🔘 Buttons</h2>
+
+            <p class="muted mb4 f3">
+                Composable button styles with BEM modifiers.
+            </p>
+
+            <div class="grid cols-1 g4">
+                <!-- Button Variants -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Variants</h3>
+
+                    <div class="flex g3 flex-wrap">
+                        <button class="btn btn--brand">Brand</button>
+                        <button class="btn btn--surface">Surface</button>
+                        <button class="btn btn--outline">Outline</button>
+                        <button class="btn btn--ghost">Ghost</button>
+                    </div>
+                </div>
+
+                <!-- Button Colors -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Colors</h3>
+
+                    <div class="flex g3 flex-wrap">
+                        <button class="btn btn--brand">Brand</button>
+                        <button class="btn btn--success">Success</button>
+                        <button class="btn btn--error">Error</button>
+                    </div>
+                </div>
+
+                <!-- Button Sizes -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">Sizes</h3>
+
+                    <div class="flex g3 flex-wrap items-center">
+                        <button class="btn btn--brand btn--sm">Small</button>
+                        <button class="btn btn--brand">Default</button>
+                        <button class="btn btn--brand btn--lg">Large</button>
+                    </div>
+                </div>
+
+                <!-- Button States -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">States</h3>
+
+                    <div class="flex g3 flex-wrap">
+                        <button class="btn btn--brand" disabled>Disabled</button>
+                        <button class="btn btn--outline" disabled>Disabled</button>
+                    </div>
+                </div>
+
+                <!-- Icon Buttons -->
+                <div>
+                    <h3 class="f3 fw6 mb3 muted">With Icons</h3>
+
+                    <div class="flex g3 flex-wrap items-center">
+                        <button class="btn btn--brand"><span>✓</span> Save</button>
+                        <button class="btn btn--outline"><span>↗</span> Export</button>
+
+                        <button class="btn btn--ghost btn--icon" aria-label="Settings">
+                            ⚙️
+                        </button>
+
+                        <button class="btn btn--surface btn--icon" aria-label="Close">
+                            ✕
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Focus Rings -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2">
             <h2 class="f5 fw6 mb3">🎯 Focus Rings</h2>
 
             <p class="muted mb3 f3">
@@ -376,55 +449,55 @@
         </section>
 
         <!-- Scroll Snap -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2 overflow-hidden">
             <h2 class="f5 fw6 mb3">📜 Scroll Snap</h2>
             <p class="muted mb3 f3">Horizontal scroll snap with smooth behavior.</p>
 
             <div class="scroll-snap-x flex g3 pb3 scrollbar-thin">
                 <div class="
-              flex-none w5 h4 bg-brand br3 flex items-center justify-center
+              flex-none w4 h4 bg-brand br3 flex items-center justify-center
               surface-0 fw6 snap-center
             ">
                     1
                 </div>
 
                 <div class="
-              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              flex-none w4 h4 bg-surface-2 br3 flex items-center
               justify-center text fw6 snap-center
             ">
                     2
                 </div>
 
                 <div class="
-              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              flex-none w4 h4 bg-surface-2 br3 flex items-center
               justify-center text fw6 snap-center
             ">
                     3
                 </div>
 
                 <div class="
-              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              flex-none w4 h4 bg-surface-2 br3 flex items-center
               justify-center text fw6 snap-center
             ">
                     4
                 </div>
 
                 <div class="
-              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              flex-none w4 h4 bg-surface-2 br3 flex items-center
               justify-center text fw6 snap-center
             ">
                     5
                 </div>
 
                 <div class="
-              flex-none w5 h4 bg-surface-2 br3 flex items-center
+              flex-none w4 h4 bg-surface-2 br3 flex items-center
               justify-center text fw6 snap-center
             ">
                     6
                 </div>
 
                 <div class="
-              flex-none w5 h4 bg-brand br3 flex items-center justify-center
+              flex-none w4 h4 bg-brand br3 flex items-center justify-center
               surface-0 fw6 snap-center
             ">
                     7
@@ -433,7 +506,7 @@
         </section>
 
         <!-- Skeleton Loading -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2">
             <h2 class="f5 fw6 mb3">💀 Skeleton Loading</h2>
             <p class="muted mb4 f3">Placeholder loading animations for content.</p>
 
@@ -471,7 +544,7 @@
         </section>
 
         <!-- Text Utilities -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2">
             <h2 class="f5 fw6 mb3">✍️ Text Utilities</h2>
             <p class="muted mb4 f3">Modern text wrapping and typography.</p>
 
@@ -497,7 +570,7 @@
         </section>
 
         <!-- Shadows -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 pbe6 shadow-2">
             <h2 class="f5 fw6 mb3">🌑 Shadows</h2>
 
             <p class="muted mb4 f3">
@@ -505,26 +578,26 @@
             </p>
 
             <div class="grid cols-2 cols-4-m g4">
-                <div class="bg-surface-0 p4 br3 shadow-1 tc">
+                <div class="bg-surface-2 p4 br3 shadow-1 tc">
                     <p class="f2 muted">shadow-1</p>
                 </div>
 
-                <div class="bg-surface-0 p4 br3 shadow-2 tc">
+                <div class="bg-surface-2 p4 br3 shadow-2 tc">
                     <p class="f2 muted">shadow-2</p>
                 </div>
 
-                <div class="bg-surface-0 p4 br3 shadow-3 tc">
+                <div class="bg-surface-2 p4 br3 shadow-3 tc">
                     <p class="f2 muted">shadow-3</p>
                 </div>
 
-                <div class="bg-surface-0 p4 br3 shadow-4 tc">
+                <div class="bg-surface-2 p4 br3 shadow-4 tc">
                     <p class="f2 muted">shadow-4</p>
                 </div>
             </div>
         </section>
 
         <!-- Semantic Colors -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2">
             <h2 class="f5 fw6 mb3">🎨 Semantic Colors</h2>
 
             <p class="muted mb4 f3">
@@ -548,7 +621,7 @@
         </section>
 
         <!-- Profile Card (Original Example) -->
-        <section class="bg-surface-0 br3 p4 shadow-2">
+        <section class="bg-surface-1 br3 p4 shadow-2">
             <h2 class="f5 fw6 mb3">👤 Profile Card</h2>
             <p class="muted mb4 f3">Classic Tachyons component example.</p>
 

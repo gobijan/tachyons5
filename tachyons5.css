@@ -622,10 +622,10 @@ template {
     --brand-light: var(--indigo-5);
     --text-light: var(--slate-gray-0);
     --muted-light: var(--slate-gray-5);
-    --surface-0-light: var(--slate-gray-11);
-    --surface-1-light: var(--slate-gray-10);
-    --surface-2-light: var(--slate-gray-9);
-    --surface-3-light: var(--slate-gray-8);
+    --surface-0-light: var(--slate-gray-8);
+    --surface-1-light: var(--slate-gray-9);
+    --surface-2-light: var(--slate-gray-10);
+    --surface-3-light: var(--slate-gray-11);
     --error-light: var(--red-5);
     --success-light: var(--green-5);
     --notice-light: var(--blue-5);
@@ -1189,8 +1189,10 @@ template {
 /* Scroll snap container */
 .scroll-snap-x {
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
 }
 
 .scroll-snap-y {
@@ -1578,6 +1580,127 @@ template {
 .switch:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+/*
+
+    BUTTONS
+
+    Composable button styles following BEM conventions.
+    Base .btn class with modifier variants.
+
+*/
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-2);
+    cursor: pointer;
+    transition:
+        background-color var(--duration-0) var(--easing-function-1),
+        border-color var(--duration-0) var(--easing-function-1),
+        color var(--duration-0) var(--easing-function-1),
+        box-shadow var(--duration-0) var(--easing-function-1),
+        transform var(--duration-0) var(--easing-function-1);
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+/* Button variants */
+.btn--brand {
+    background-color: var(--brand);
+    color: white;
+}
+
+.btn--brand:hover:not(:disabled) {
+    background-color: hsl(from var(--brand) h s calc(l - 5));
+}
+
+.btn--surface {
+    background-color: var(--surface-2);
+    color: var(--text);
+}
+
+.btn--surface:hover:not(:disabled) {
+    background-color: var(--surface-3);
+}
+
+.btn--outline {
+    background-color: transparent;
+    border-color: var(--muted);
+    color: var(--text);
+}
+
+.btn--outline:hover:not(:disabled) {
+    border-color: var(--text);
+    background-color: var(--surface-1);
+}
+
+.btn--ghost {
+    background-color: transparent;
+    color: var(--text);
+}
+
+.btn--ghost:hover:not(:disabled) {
+    background-color: var(--surface-1);
+}
+
+/* Button color variants */
+.btn--error {
+    background-color: var(--error);
+    color: white;
+}
+
+.btn--error:hover:not(:disabled) {
+    background-color: hsl(from var(--error) h s calc(l - 5));
+}
+
+.btn--success {
+    background-color: var(--success);
+    color: white;
+}
+
+.btn--success:hover:not(:disabled) {
+    background-color: hsl(from var(--success) h s calc(l - 5));
+}
+
+/* Button sizes */
+.btn--sm {
+    padding: var(--spacing-1) var(--spacing-3);
+    font-size: var(--font-size-2);
+}
+
+.btn--lg {
+    padding: var(--spacing-3) var(--spacing-5);
+    font-size: var(--font-size-4);
+}
+
+/* Icon-only button (square) */
+.btn--icon {
+    padding: var(--spacing-2);
+    aspect-ratio: 1;
 }
 
 /*
@@ -8922,99 +9045,99 @@ img {
 
 }
 
-.tint-0 {
+.white-o0 {
     color: var(--tint-0)
 }
 
-.tint-1 {
+.white-o1 {
     color: var(--tint-1)
 }
 
-.tint-2 {
+.white-o2 {
     color: var(--tint-2)
 }
 
-.tint-3 {
+.white-o3 {
     color: var(--tint-3)
 }
 
-.tint-4 {
+.white-o4 {
     color: var(--tint-4)
 }
 
-.tint-5 {
+.white-o5 {
     color: var(--tint-5)
 }
 
-.tint-6 {
+.white-o6 {
     color: var(--tint-6)
 }
 
-.tint-7 {
+.white-o7 {
     color: var(--tint-7)
 }
 
-.tint-8 {
+.white-o8 {
     color: var(--tint-8)
 }
 
-.tint-9 {
+.white-o9 {
     color: var(--tint-9)
 }
 
-.tint-10 {
+.white-o10 {
     color: var(--tint-10)
 }
 
-.tint-11 {
+.white-o11 {
     color: var(--tint-11)
 }
 
-.shadow-0 {
+.black-o0 {
     color: var(--shadow-0)
 }
 
-.shadow-1 {
+.black-o1 {
     color: var(--shadow-1)
 }
 
-.shadow-2 {
+.black-o2 {
     color: var(--shadow-2)
 }
 
-.shadow-3 {
+.black-o3 {
     color: var(--shadow-3)
 }
 
-.shadow-4 {
+.black-o4 {
     color: var(--shadow-4)
 }
 
-.shadow-5 {
+.black-o5 {
     color: var(--shadow-5)
 }
 
-.shadow-6 {
+.black-o6 {
     color: var(--shadow-6)
 }
 
-.shadow-7 {
+.black-o7 {
     color: var(--shadow-7)
 }
 
-.shadow-8 {
+.black-o8 {
     color: var(--shadow-8)
 }
 
-.shadow-9 {
+.black-o9 {
     color: var(--shadow-9)
 }
 
-.shadow-10 {
+.black-o10 {
     color: var(--shadow-10)
 }
 
-.shadow-11 {
+.black-o11 {
     color: var(--shadow-11)
 }
 
