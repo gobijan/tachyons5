@@ -730,12 +730,14 @@
     outline-offset: -2px;
 }
 
-.focus-ring-error:focus-visible {
+.focus-ring-error:focus-visible,
+.btn.focus-ring-error:focus-visible {
     outline: 2px solid var(--error);
     outline-offset: 2px;
 }
 
-.focus-ring-success:focus-visible {
+.focus-ring-success:focus-visible,
+.btn.focus-ring-success:focus-visible {
     outline: 2px solid var(--success);
     outline-offset: 2px;
 }
