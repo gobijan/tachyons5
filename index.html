@@ -32,24 +32,17 @@
             </p>
 
             <div class="flex g3 items-center">
-                <button onclick="document.documentElement.setAttribute('color-scheme', 'light')" class="
-              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-              trans-bg hover-bg-surface-3 focus-ring
-            ">
+                <button onclick="document.documentElement.setAttribute('color-scheme', 'light')"
+                    class="btn btn--surface">
                     ☀️ Light
                 </button>
 
-                <button onclick="document.documentElement.setAttribute('color-scheme', 'dark')" class="
-              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-              trans-bg hover-bg-surface-3 focus-ring
-            ">
+                <button onclick="document.documentElement.setAttribute('color-scheme', 'dark')"
+                    class="btn btn--surface">
                     🌙 Dark
                 </button>
 
-                <button onclick="document.documentElement.removeAttribute('color-scheme')" class="
-              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-              trans-bg hover-bg-surface-3 focus-ring
-            ">
+                <button onclick="document.documentElement.removeAttribute('color-scheme')" class="btn btn--surface">
                     💻 System
                 </button>
             </div>
@@ -66,10 +59,8 @@
             <div class="flex g3 flex-wrap">
                 <!-- Dropdown 1 -->
                 <div class="dib">
-                    <button popovertarget="dropdown-1" class="
-                button-reset pi4 bn pb3 br11 bg-brand surface-0 pointer fw5
-                f3 trans-bg hover-o-80 focus-ring
-              " style="anchor-name: --anchor-1;" aria-haspopup="menu" aria-controls="dropdown-1">
+                    <button popovertarget="dropdown-1" class="btn btn--brand br11" style="anchor-name: --anchor-1;"
+                        aria-haspopup="menu" aria-controls="dropdown-1">
                         Actions ▾
                     </button>
 
@@ -100,10 +91,8 @@
 
                 <!-- Dropdown 2 - Right aligned -->
                 <div class="dib">
-                    <button popovertarget="dropdown-2" class="
-                button-reset pi4 bn pb3 br11 bg-surface-2 text pointer fw5
-                f3 trans-bg hover-bg-surface-3 focus-ring
-              " style="anchor-name: --anchor-2;" aria-haspopup="menu" aria-controls="dropdown-2">
+                    <button popovertarget="dropdown-2" class="btn btn--surface br11" style="anchor-name: --anchor-2;"
+                        aria-haspopup="menu" aria-controls="dropdown-2">
                         Right Aligned ▾
                     </button>
 
@@ -139,24 +128,15 @@
             </p>
 
             <div class="flex g3 flex-wrap">
-                <button onclick="document.getElementById('dialog-sm').showModal()" class="
-              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-              trans-bg hover-bg-surface-3 focus-ring
-            ">
+                <button onclick="document.getElementById('dialog-sm').showModal()" class="btn btn--surface">
                     Small Dialog
                 </button>
 
-                <button onclick="document.getElementById('dialog-default').showModal()" class="
-              button-reset pi4 pb3 br3 bg-brand surface-0 pointer fw5 f3
-              trans-bg hover-o-80 focus-ring
-            ">
+                <button onclick="document.getElementById('dialog-default').showModal()" class="btn btn--brand">
                     Default Dialog
                 </button>
 
-                <button onclick="document.getElementById('dialog-lg').showModal()" class="
-              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-              trans-bg hover-bg-surface-3 focus-ring
-            ">
+                <button onclick="document.getElementById('dialog-lg').showModal()" class="btn btn--surface">
                     Large Dialog
                 </button>
             </div>
@@ -170,17 +150,11 @@
                 </p>
 
                 <div class="flex g2 justify-end">
-                    <button onclick="this.closest('dialog').close()" class="
-                button-reset pi3 pb2 br2 bg-surface-2 text pointer f3
-                trans-bg hover-bg-surface-3
-              ">
+                    <button onclick="this.closest('dialog').close()" class="btn btn--surface btn--sm">
                         Cancel
                     </button>
 
-                    <button onclick="this.closest('dialog').close()" class="
-                button-reset pi3 pb2 br2 bg-brand surface-0 pointer f3
-                trans-bg hover-o-80
-              ">
+                    <button onclick="this.closest('dialog').close()" class="btn btn--brand btn--sm">
                         Confirm
                     </button>
                 </div>
@@ -201,10 +175,7 @@
                 </p>
 
                 <div class="flex g2 justify-end">
-                    <button onclick="this.closest('dialog').close()" class="
-                button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-                trans-bg hover-bg-surface-3
-              ">
+                    <button onclick="this.closest('dialog').close()" class="btn btn--surface">
                         Close
                     </button>
                 </div>
@@ -225,12 +196,172 @@
                 </div>
 
                 <div class="flex g2 justify-end">
-                    <button onclick="this.closest('dialog').close()" class="
-                button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-                trans-bg hover-bg-surface-3
-              ">
+                    <button onclick="this.closest('dialog').close()" class="btn btn--surface">
                         Close
                     </button>
+                </div>
+            </dialog>
+        </section>
+
+        <!-- Drawers -->
+        <section class="bg-surface-1 br3 p4 shadow-2">
+            <h2 class="f5 fw6 mb3">📱 Drawers</h2>
+
+            <p class="muted mb3 f3">
+                Slide-in panels from any edge. Great for navigation, settings, and
+                command palettes.
+            </p>
+
+            <div class="flex g3 flex-wrap">
+                <button onclick="document.getElementById('drawer-left').showModal()" class="btn btn--surface">
+                    ← Left (Nav)
+                </button>
+
+                <button onclick="document.getElementById('drawer-right').showModal()" class="btn btn--surface">
+                    Right (Settings) →
+                </button>
+
+                <button onclick="document.getElementById('drawer-top').showModal()" class="btn btn--surface">
+                    ↑ Top (Alerts)
+                </button>
+
+                <button onclick="document.getElementById('drawer-bottom').showModal()" class="btn btn--brand">
+                    ↓ Bottom (Commands)
+                </button>
+            </div>
+
+            <!-- Left Drawer -->
+            <dialog id="drawer-left" class="drawer drawer--left">
+                <div class="flex justify-between items-center mb4">
+                    <h3 class="f4 fw6">Navigation</h3>
+
+                    <button onclick="this.closest('dialog').close()" class="btn btn--ghost btn--icon"
+                        aria-label="Close">
+                        ✕
+                    </button>
+                </div>
+
+                <nav class="grid cols-1 g2">
+                    <a href="#" class="db p3 no-underline text hover-bg-surface-1 trans-bg br2">
+                        🏠 Home
+                    </a>
+
+                    <a href="#" class="db p3 no-underline text hover-bg-surface-1 trans-bg br2">
+                        📊 Dashboard
+                    </a>
+
+                    <a href="#" class="db p3 no-underline text hover-bg-surface-1 trans-bg br2">
+                        👤 Profile
+                    </a>
+
+                    <a href="#" class="db p3 no-underline text hover-bg-surface-1 trans-bg br2">
+                        ⚙️ Settings
+                    </a>
+
+                    <a href="#" class="db p3 no-underline text hover-bg-surface-1 trans-bg br2">
+                        📝 Documents
+                    </a>
+
+                    <a href="#" class="db p3 no-underline muted hover-bg-surface-1 trans-bg br2">
+                        🚪 Logout
+                    </a>
+                </nav>
+            </dialog>
+
+            <!-- Right Drawer -->
+            <dialog id="drawer-right" class="drawer drawer--right">
+                <div class="flex justify-between items-center mb4">
+                    <h3 class="f4 fw6">Settings</h3>
+
+                    <button onclick="this.closest('dialog').close()" class="btn btn--ghost btn--icon"
+                        aria-label="Close">
+                        ✕
+                    </button>
+                </div>
+
+                <div class="grid cols-1 g4">
+                    <label class="flex items-center justify-between">
+                        <span>Dark Mode</span>
+                        <input type="checkbox" class="switch" checked>
+                    </label>
+
+                    <label class="flex items-center justify-between">
+                        <span>Notifications</span>
+                        <input type="checkbox" class="switch">
+                    </label>
+
+                    <label class="flex items-center justify-between">
+                        <span>Auto-save</span>
+                        <input type="checkbox" class="switch" checked>
+                    </label>
+
+                    <div class="pt3 bt b--surface-1">
+                        <p class="f2 muted mb2">Theme Color</p>
+
+                        <div class="flex g2">
+                            <button class="btn btn--icon bg-indigo-5"></button>
+                            <button class="btn btn--icon bg-blue-5"></button>
+                            <button class="btn btn--icon bg-teal-5"></button>
+                            <button class="btn btn--icon bg-green-5"></button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <!-- Top Drawer -->
+            <dialog id="drawer-top" class="drawer drawer--top drawer--sm">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center g3">
+                        <span class="f4">🔔</span>
+
+                        <div>
+                            <p class="fw6">New message received</p>
+                            <p class="f2 muted">Alice sent you a message 2 minutes ago</p>
+                        </div>
+                    </div>
+
+                    <button onclick="this.closest('dialog').close()" class="btn btn--ghost btn--icon"
+                        aria-label="Close">
+                        ✕
+                    </button>
+                </div>
+            </dialog>
+
+            <!-- Bottom Drawer -->
+            <dialog id="drawer-bottom" class="drawer drawer--bottom">
+                <div class="mw7 center">
+                    <div class="flex justify-between items-center mb3">
+                        <h3 class="f4 fw6">Command Palette</h3>
+
+                        <button onclick="this.closest('dialog').close()" class="btn btn--ghost btn--icon"
+                            aria-label="Close">
+                            ✕
+                        </button>
+                    </div>
+
+                    <input type="text" class="input w-100 mb3" placeholder="Type a command...">
+
+                    <div class="grid cols-1 g1">
+                        <button class="btn btn--ghost justify-start w-100">
+                            <span class="muted">⌘N</span> New Document
+                        </button>
+
+                        <button class="btn btn--ghost justify-start w-100">
+                            <span class="muted">⌘O</span> Open File
+                        </button>
+
+                        <button class="btn btn--ghost justify-start w-100">
+                            <span class="muted">⌘S</span> Save
+                        </button>
+
+                        <button class="btn btn--ghost justify-start w-100">
+                            <span class="muted">⌘⇧P</span> Command Palette
+                        </button>
+
+                        <button class="btn btn--ghost justify-start w-100">
+                            <span class="muted">⌘K</span> Quick Actions
+                        </button>
+                    </div>
                 </div>
             </dialog>
         </section>
@@ -557,31 +688,19 @@
             </p>
 
             <div class="flex g3 flex-wrap">
-                <button class="
-              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-              focus-ring
-            ">
+                <button class="btn btn--surface focus-ring">
                     Brand Focus
                 </button>
 
-                <button class="
-              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-              focus-ring-error
-            ">
+                <button class="btn btn--surface focus-ring-error">
                     Error Focus
                 </button>
 
-                <button class="
-              button-reset pi4 pb3 br3 bg-surface-2 text pointer fw5 f3
-              focus-ring-success
-            ">
+                <button class="btn btn--surface focus-ring-success">
                     Success Focus
                 </button>
 
-                <button class="
-              button-reset pi4 pb3 br3 bg-brand surface-0 pointer fw5 f3
-              focus-ring-inset
-            ">
+                <button class="btn btn--brand focus-ring-inset">
                     Inset Focus
                 </button>
             </div>
@@ -764,7 +883,7 @@
             <h2 class="f5 fw6 mb3">👤 Profile Card</h2>
             <p class="muted mb4 f3">Classic Tachyons component example.</p>
 
-            <article class="mw5 bg-surface-1 br3 p4 shadow-2">
+            <article class="mw5 bg-surface-2 br3 p4 shadow-2">
                 <div class="tc">
                     <img src="https://placehold.co/400x400/6366f1/FFF?text=JD" class="br11 h4 w4 dib ba b--surface-2 p1"
                         alt="avatar">
@@ -774,17 +893,11 @@
                     <p class="f3 fw4 muted mt0">Developer</p>
 
                     <div class="flex g2 justify-center mt3">
-                        <button class="
-                  button-reset pi3 pb2 br2 bg-brand surface-0 pointer f2
-                  trans-bg hover-o-80
-                ">
-                            Follow
+                        <button class="btn--brand btn">
+                            + Follow
                         </button>
 
-                        <button class="
-                  button-reset pi3 pb2 br2 bg-surface-2 text pointer f2
-                  trans-bg hover-bg-surface-3
-                ">
+                        <button class="btn btn--outline">
                             Message
                         </button>
                     </div>
