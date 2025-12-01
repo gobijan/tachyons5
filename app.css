@@ -777,21 +777,22 @@
     align-items: center;
     justify-content: center;
     gap: var(--spacing-2);
-    padding: var(--spacing-2) var(--spacing-4);
+    padding: var(--spacing-3) var(--spacing-4);
     font-family: inherit;
     font-size: inherit;
     font-weight: 600;
     line-height: 1;
     text-decoration: none;
     border: 1px solid transparent;
-    border-radius: var(--border-radius-2);
+    border-radius: var(--border-radius-11);
     cursor: pointer;
     transition:
         background-color var(--duration-0) var(--easing-function-1),
         border-color var(--duration-0) var(--easing-function-1),
         color var(--duration-0) var(--easing-function-1),
         box-shadow var(--duration-0) var(--easing-function-1),
-        transform var(--duration-0) var(--easing-function-1);
+        transform var(--duration-0) var(--easing-function-1),
+        filter var(--duration-0) var(--easing-function-1);
 }
 
 .btn:focus-visible {
@@ -807,6 +808,7 @@
 
 .btn:active:not(:disabled) {
     transform: scale(0.98);
+    filter: brightness(0.9);
 }
 
 /* Button variants */
@@ -883,6 +885,7 @@
     padding: var(--spacing-2);
     aspect-ratio: 1;
 }
+
 
 /* ==========================================================================
    SKELETON / LOADING
