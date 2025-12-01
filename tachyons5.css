@@ -617,6 +617,437 @@ template {
     --easing-function-2:ease-out;
     --easing-function-3:ease-in-out;
     --easing-function-4:linear;
+
+    /* Semantic Theme Palette - Light */
+    --brand-light: var(--indigo-5);
+    --text-light: var(--slate-gray-0);
+    --muted-light: var(--slate-gray-5);
+    --surface-0-light: var(--slate-gray-11);
+    --surface-1-light: var(--slate-gray-10);
+    --surface-2-light: var(--slate-gray-9);
+    --surface-3-light: var(--slate-gray-8);
+    --error-light: var(--red-5);
+    --success-light: var(--green-5);
+    --notice-light: var(--blue-5);
+
+    /* Semantic Theme Palette - Dark */
+    --brand-dark: var(--indigo-6);
+    --text-dark: var(--slate-gray-11);
+    --muted-dark: var(--slate-gray-6);
+    --surface-0-dark: var(--slate-gray-0);
+    --surface-1-dark: var(--slate-gray-1);
+    --surface-2-dark: var(--slate-gray-2);
+    --surface-3-dark: var(--slate-gray-3);
+    --error-dark: var(--red-6);
+    --success-dark: var(--green-6);
+    --notice-dark: var(--blue-6);
+
+    /* Default to light theme */
+    color-scheme: light;
+    --brand: var(--brand-light);
+    --text: var(--text-light);
+    --muted: var(--muted-light);
+    --surface-0: var(--surface-0-light);
+    --surface-1: var(--surface-1-light);
+    --surface-2: var(--surface-2-light);
+    --surface-3: var(--surface-3-light);
+    --error: var(--error-light);
+    --success: var(--success-light);
+    --notice: var(--notice-light);
+}
+
+/* Automatic dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --shadow-color: 220 40% 2%;
+        --shadow-strength: 25%;
+        --inner-shadow-highlight: inset 0 -.5px 0 0 #fff1, inset 0 .5px 0 0 #0007;
+        --brand: var(--brand-dark);
+        --text: var(--text-dark);
+        --muted: var(--muted-dark);
+        --surface-0: var(--surface-0-dark);
+        --surface-1: var(--surface-1-dark);
+        --surface-2: var(--surface-2-dark);
+        --surface-3: var(--surface-3-dark);
+        --error: var(--error-dark);
+        --success: var(--success-dark);
+        --notice: var(--notice-dark);
+    }
+}
+
+/* Manual light mode override */
+[color-scheme="light"] {
+    color-scheme: light;
+    --shadow-color: 220 3% 15%;
+    --shadow-strength: 1%;
+    --inner-shadow-highlight: inset 0 -.5px 0 0 #fff, inset 0 .5px 0 0 #0001;
+    --brand: var(--brand-light);
+    --text: var(--text-light);
+    --muted: var(--muted-light);
+    --surface-0: var(--surface-0-light);
+    --surface-1: var(--surface-1-light);
+    --surface-2: var(--surface-2-light);
+    --surface-3: var(--surface-3-light);
+    --error: var(--error-light);
+    --success: var(--success-light);
+    --notice: var(--notice-light);
+}
+
+/* Manual dark mode override */
+[color-scheme="dark"] {
+    color-scheme: dark;
+    --shadow-color: 220 40% 2%;
+    --shadow-strength: 25%;
+    --inner-shadow-highlight: inset 0 -.5px 0 0 #fff1, inset 0 .5px 0 0 #0007;
+    --brand: var(--brand-dark);
+    --text: var(--text-dark);
+    --muted: var(--muted-dark);
+    --surface-0: var(--surface-0-dark);
+    --surface-1: var(--surface-1-dark);
+    --surface-2: var(--surface-2-dark);
+    --surface-3: var(--surface-3-dark);
+    --error: var(--error-dark);
+    --success: var(--success-dark);
+    --notice: var(--notice-dark);
+}
+
+/* Semantic text colors */
+.brand {
+    color: var(--brand)
+}
+
+.text {
+    color: var(--text)
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.error {
+    color: var(--error)
+}
+
+.success {
+    color: var(--success)
+}
+
+.notice {
+    color: var(--notice)
+}
+
+.surface-0 {
+    color: var(--surface-0)
+}
+
+.surface-1 {
+    color: var(--surface-1)
+}
+
+.surface-2 {
+    color: var(--surface-2)
+}
+
+.surface-3 {
+    color: var(--surface-3)
+}
+
+/* Semantic background colors */
+.bg-brand {
+    background-color: var(--brand)
+}
+
+.bg-surface-0 {
+    background-color: var(--surface-0)
+}
+
+.bg-surface-1 {
+    background-color: var(--surface-1)
+}
+
+.bg-surface-2 {
+    background-color: var(--surface-2)
+}
+
+.bg-surface-3 {
+    background-color: var(--surface-3)
+}
+
+.bg-error {
+    background-color: var(--error)
+}
+
+.bg-success {
+    background-color: var(--success)
+}
+
+.bg-notice {
+    background-color: var(--notice)
+}
+
+/* Semantic border colors */
+.b--brand {
+    border-color: var(--brand)
+}
+
+.b--text {
+    border-color: var(--text)
+}
+
+.b--muted {
+    border-color: var(--muted)
+}
+
+.b--surface-0 {
+    border-color: var(--surface-0)
+}
+
+.b--surface-1 {
+    border-color: var(--surface-1)
+}
+
+.b--surface-2 {
+    border-color: var(--surface-2)
+}
+
+.b--surface-3 {
+    border-color: var(--surface-3)
+}
+
+.b--error {
+    border-color: var(--error)
+}
+
+.b--success {
+    border-color: var(--success)
+}
+
+.b--notice {
+    border-color: var(--notice)
+}
+
+/* Semantic hover states - text */
+.hover-brand:hover {
+    color: var(--brand)
+}
+
+.hover-text:hover {
+    color: var(--text)
+}
+
+.hover-muted:hover {
+    color: var(--muted)
+}
+
+.hover-error:hover {
+    color: var(--error)
+}
+
+.hover-success:hover {
+    color: var(--success)
+}
+
+.hover-notice:hover {
+    color: var(--notice)
+}
+
+/* Semantic hover states - background */
+.hover-bg-brand:hover {
+    background-color: var(--brand)
+}
+
+.hover-bg-surface-0:hover {
+    background-color: var(--surface-0)
+}
+
+.hover-bg-surface-1:hover {
+    background-color: var(--surface-1)
+}
+
+.hover-bg-surface-2:hover {
+    background-color: var(--surface-2)
+}
+
+.hover-bg-surface-3:hover {
+    background-color: var(--surface-3)
+}
+
+.hover-bg-error:hover {
+    background-color: var(--error)
+}
+
+.hover-bg-success:hover {
+    background-color: var(--success)
+}
+
+.hover-bg-notice:hover {
+    background-color: var(--notice)
+}
+
+/* Semantic hover states - border */
+.hover-b--brand:hover {
+    border-color: var(--brand)
+}
+
+.hover-b--text:hover {
+    border-color: var(--text)
+}
+
+.hover-b--muted:hover {
+    border-color: var(--muted)
+}
+
+.hover-b--error:hover {
+    border-color: var(--error)
+}
+
+.hover-b--success:hover {
+    border-color: var(--success)
+}
+
+.hover-b--notice:hover {
+    border-color: var(--notice)
+}
+
+/* Semantic focus states - text */
+.focus-brand:focus {
+    color: var(--brand)
+}
+
+.focus-text:focus {
+    color: var(--text)
+}
+
+.focus-muted:focus {
+    color: var(--muted)
+}
+
+.focus-error:focus {
+    color: var(--error)
+}
+
+.focus-success:focus {
+    color: var(--success)
+}
+
+.focus-notice:focus {
+    color: var(--notice)
+}
+
+/* Semantic focus states - background */
+.focus-bg-brand:focus {
+    background-color: var(--brand)
+}
+
+.focus-bg-surface-0:focus {
+    background-color: var(--surface-0)
+}
+
+.focus-bg-surface-1:focus {
+    background-color: var(--surface-1)
+}
+
+.focus-bg-surface-2:focus {
+    background-color: var(--surface-2)
+}
+
+.focus-bg-surface-3:focus {
+    background-color: var(--surface-3)
+}
+
+.focus-bg-error:focus {
+    background-color: var(--error)
+}
+
+.focus-bg-success:focus {
+    background-color: var(--success)
+}
+
+.focus-bg-notice:focus {
+    background-color: var(--notice)
+}
+
+/* Semantic focus states - border */
+.focus-b--brand:focus {
+    border-color: var(--brand)
+}
+
+.focus-b--text:focus {
+    border-color: var(--text)
+}
+
+.focus-b--muted:focus {
+    border-color: var(--muted)
+}
+
+.focus-b--error:focus {
+    border-color: var(--error)
+}
+
+.focus-b--success:focus {
+    border-color: var(--success)
+}
+
+.focus-b--notice:focus {
+    border-color: var(--notice)
+}
+
+/*
+
+    DROPDOWN MENU
+
+    A dropdown menu component using the Popover API with CSS anchor positioning.
+    Uses smooth opacity and transform transitions with @starting-style for entry animations.
+
+*/
+
+.dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity var(--animation-duration-1) var(--easing-function-1),
+        transform var(--animation-duration-1) var(--easing-function-1),
+        display var(--animation-duration-1) allow-discrete;
+    position-anchor: var(--anchor);
+    position-try-fallbacks: flip-block, flip-inline;
+    top: anchor(bottom);
+    left: anchor(left);
+    margin: 0;
+    position: absolute;
+}
+
+@starting-style {
+    .dropdown-menu:popover-open {
+        opacity: 0;
+        transform: translateY(calc(-1 * var(--spacing-2)));
+    }
+}
+
+.dropdown-menu:not(:popover-open) {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--spacing-2)));
+}
+
+/* Alternative anchor positions */
+.dropdown-menu--end {
+    left: auto;
+    right: anchor(right);
+}
+
+.dropdown-menu--top {
+    top: auto;
+    bottom: anchor(top);
+}
+
+@starting-style {
+    .dropdown-menu--top:popover-open {
+        transform: translateY(var(--spacing-2));
+    }
+}
+
+.dropdown-menu--top:not(:popover-open) {
+    transform: translateY(var(--spacing-2));
 }
 
 .gradient-1 {

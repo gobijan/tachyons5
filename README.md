@@ -43,6 +43,7 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 | Feature | Description |
 |---------|-------------|
 | 🎨 **CSS Variables** | Full theming support with custom properties |
+| 🌓 **Dark Mode** | Automatic + manual light/dark theme switching |
 | 📦 **Zero Build** | No npm, no webpack, no PostCSS — just drop it in |
 | 📱 **Responsive** | Mobile-first with media queries AND container queries |
 | 🔲 **CSS Grid** | Native grid support with `cols-*` and `g*` gap utilities |
@@ -134,6 +135,15 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 | `bg-blue`, `bg-red`, `bg-green`... | Background colors |
 | `b--blue`, `b--red`... | Border colors |
 
+### Semantic Theme Colors
+| Class | Description |
+|-------|-------------|
+| `brand`, `bg-brand`, `b--brand` | Primary brand color |
+| `text`, `muted` | Text colors (primary, secondary) |
+| `surface-0` - `surface-3` | Surface/background layers |
+| `error`, `success`, `notice` | Semantic status colors |
+| `hover-*`, `focus-*` | Interactive state variants |
+
 ### Positioning (Logical Properties)
 | Class | Property |
 |-------|----------|
@@ -176,6 +186,34 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 | `shadow-4` | Heavy shadow for modals/dialogs |
 | `inner-shadow-1` - `inner-shadow-4` | Inset shadows with highlight |
 
+### Dropdown Menu Component
+
+A dropdown menu component using the Popover API with CSS anchor positioning and smooth animations.
+
+```html
+<div class="dib">
+    <button popovertarget="dropdown-1" 
+            style="anchor-name: --anchor-1;" 
+            aria-haspopup="menu">
+        Actions ▾
+    </button>
+    <div id="dropdown-1" 
+         popover 
+         class="dropdown-menu p3 bg-white shadow-3 br4" 
+         style="--anchor: --anchor-1;" 
+         role="menu">
+        <a href="#" class="db p3 hover-bg-gray-10 br3">Edit</a>
+        <a href="#" class="db p3 hover-bg-gray-10 br3">Delete</a>
+    </div>
+</div>
+```
+
+| Class | Description |
+|-------|-------------|
+| `dropdown-menu` | Base dropdown with anchor positioning and animations |
+| `dropdown-menu--end` | Right-align dropdown to anchor |
+| `dropdown-menu--top` | Position dropdown above anchor |
+
 ### Container Queries
 | Class | Property |
 |-------|----------|
@@ -194,7 +232,7 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 
 ---
 
-## 🎨 CSS Variables
+## 🎨 CSS Variables & Theming
 
 Tachyons 5 uses CSS custom properties for easy theming:
 
@@ -211,10 +249,27 @@ Override them to customize your design system:
 
 ```css
 :root {
-  --blue: #0066cc;
-  --font-family-sans: 'Inter', sans-serif;
+  --brand-light: var(--blue-5);  /* Change brand color */
+  --font-family-body: 'Inter', sans-serif;
 }
 ```
+
+### Dark Mode
+
+Dark mode works automatically via `prefers-color-scheme`, or manually:
+
+```html
+<!-- Automatic (follows system preference) -->
+<html>
+
+<!-- Force light mode -->
+<html color-scheme="light">
+
+<!-- Force dark mode -->
+<html color-scheme="dark">
+```
+
+The semantic color tokens (`--brand`, `--text`, `--surface-*`, etc.) automatically switch between light and dark palettes.
 
 ---
 
@@ -224,10 +279,13 @@ Tachyons 5 was originally designed by [Adam Morse](https://github.com/mrmrs) but
 
 **What's different from Tachyons 4:**
 - ✅ Full CSS Variables support
+- ✅ Semantic theming with automatic dark mode
 - ✅ Container Queries for component-based responsive design
 - ✅ CSS Grid utilities (`grid`, `cols-*`)
 - ✅ Simplified class names (`p4` instead of `pa4`)
 - ✅ CSS Logical Properties for RTL/internationalization support
+- ✅ OpenProps-inspired shadow system
+- ✅ Dropdown menu component with Popover API & anchor positioning
 - ✅ Modern CSS features (aspect-ratio, gap, etc.)
 - ✅ No build step required
 - ✅ Actively maintained

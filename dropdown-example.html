@@ -5,33 +5,6 @@
 <head>
     <link rel="stylesheet" href="tachyons5.css">
     <meta charset="UTF-8">
-
-    <style>
-        .dropdown-menu {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.15s ease, transform 0.15s ease, display 0.15s allow-discrete;
-            position-anchor: var(--anchor);
-            position-try-fallbacks: flip-block, flip-inline;
-            top: anchor(bottom);
-            left: anchor(left);
-            margin: 0;
-            position: absolute;
-        }
-
-        @starting-style {
-
-            .dropdown-menu:popover-open {
-                opacity: 0;
-                transform: translateY(-8px);
-            }
-        }
-
-        .dropdown-menu:not(:popover-open) {
-            opacity: 0;
-            transform: translateY(-8px);
-        }
-    </style>
 </head>
 
 <body class="p4 f-body antialiased bg-gray-9">
@@ -65,6 +38,35 @@
             active-dim
           ">
                 Delete
+            </a>
+        </div>
+    </div>
+
+    <!-- Dropdown 2 - Right aligned -->
+    <div class="dib mis4">
+        <button popovertarget="dropdown-2" class="
+          button-reset pi4 bn pb3 br11 bg-white pointer fw5 f3 trans-bg
+          hover-bg-gray-10
+        " style="anchor-name: --anchor-2;" aria-haspopup="menu" aria-controls="dropdown-2">
+            Right Aligned ▾
+        </button>
+
+        <div id="dropdown-2" popover class="
+          dropdown-menu dropdown-menu--end p3 bg-white shadow-3 br4 f3 fw5
+          bn
+        " style="--anchor: --anchor-2;" role="menu" aria-label="Options">
+            <a href="#" role="menuitem" class="
+            db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+            active-dim
+          ">
+                Option 1
+            </a>
+
+            <a href="#" role="menuitem" class="
+            db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+            active-dim
+          ">
+                Option 2
             </a>
         </div>
     </div>
