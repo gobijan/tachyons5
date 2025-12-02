@@ -40,10 +40,12 @@
         --brand-light: var(--indigo-5);
         --text-light: var(--slate-gray-0);
         --muted-light: var(--slate-gray-2);
-        --surface-0-light: var(--slate-gray-10);
-        --surface-1-light: hsl(from var(--slate-gray-10) h s calc(l + 5));
-        --surface-2-light: var(--slate-gray-11);
-        --surface-3-light: hsl(from var(--slate-gray-11) h s calc(l + 5));
+        --surface-base-light: var(--slate-gray-10);
+
+        --surface-0-light: var(--surface-base-light);
+        --surface-1-light: hsl(from var(--surface-base-light) h s calc(l + 5));
+        --surface-2-light: hsl(from var(--surface-base-light) h s calc(l + 10));
+        --surface-3-light: hsl(from var(--surface-base-light) h s calc(l + 15));
         --error-light: var(--red-5);
         --success-light: var(--green-5);
         --notice-light: var(--blue-5);
@@ -52,10 +54,12 @@
         --brand-dark: var(--indigo-6);
         --text-dark: var(--slate-gray-11);
         --muted-dark: var(--slate-gray-6);
-        --surface-0-dark: var(--slate-gray-0);
-        --surface-1-dark: hsl(from var(--slate-gray-1) h s calc(l - 5));
-        --surface-2-dark: var(--slate-gray-1);
-        --surface-3-dark: hsl(from var(--slate-gray-2) h s calc(l - 5));
+        --surface-base-dark: var(--slate-gray-0);
+
+        --surface-0-dark: var(--surface-base-dark);
+        --surface-1-dark: hsl(from var(--surface-base-dark) h s calc(l + 5));
+        --surface-2-dark: hsl(from var(--surface-base-dark) h s calc(l + 10));
+        --surface-3-dark: hsl(from var(--surface-base-dark) h s calc(l + 15));
         --error-dark: var(--red-6);
         --success-dark: var(--green-6);
         --notice-dark: var(--blue-6);
@@ -528,7 +532,7 @@
         border: none;
         border-radius: var(--border-radius-3);
         padding: var(--spacing-5);
-        background-color: var(--surface-0);
+        background-color: var(--surface-1);
         color: var(--text);
         max-width: min(90vw, 32rem);
         max-height: 85vh;
@@ -612,7 +616,7 @@
     .drawer {
         border: none;
         padding: var(--spacing-4);
-        background-color: var(--surface-0);
+        background-color: var(--surface-1);
         color: var(--text);
         box-shadow: var(--box-shadow-4);
         margin: 0;
