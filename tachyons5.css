@@ -517,6 +517,19 @@
         --font-size-10:128px;
         --font-size-11:192px;
         --font-size-12:256px;
+        /* Fluid font sizes using clamp() */
+        --font-size-fluid-1: clamp(0.75rem, 0.7rem + 0.15vw, 0.875rem);
+        --font-size-fluid-2: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+        --font-size-fluid-3: clamp(1rem, 0.9rem + 0.25vw, 1.125rem);
+        --font-size-fluid-4: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+        --font-size-fluid-5: clamp(1.25rem, 1rem + 0.75vw, 1.5rem);
+        --font-size-fluid-6: clamp(1.5rem, 1rem + 1.25vw, 2rem);
+        --font-size-fluid-7: clamp(2rem, 1.25rem + 2vw, 3rem);
+        --font-size-fluid-8: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+        --font-size-fluid-9: clamp(3rem, 1.5rem + 4.5vw, 6rem);
+        --font-size-fluid-10: clamp(4rem, 2rem + 6vw, 8rem);
+        --font-size-fluid-11: clamp(5rem, 2rem + 8vw, 12rem);
+        --font-size-fluid-12: clamp(6rem, 2rem + 10vw, 16rem);
         --measure-narrow: 45ch;
         --measure: 66ch;
         --measure-wide: 80ch;
@@ -15839,6 +15852,55 @@
         font-size: var(--font-size-12, 12rem)
     }
 
+    /* Fluid typography utilities */
+    .f1-fluid {
+        font-size: var(--font-size-fluid-1)
+    }
+
+    .f2-fluid {
+        font-size: var(--font-size-fluid-2)
+    }
+
+    .f3-fluid {
+        font-size: var(--font-size-fluid-3)
+    }
+
+    .f4-fluid {
+        font-size: var(--font-size-fluid-4)
+    }
+
+    .f5-fluid {
+        font-size: var(--font-size-fluid-5)
+    }
+
+    .f6-fluid {
+        font-size: var(--font-size-fluid-6)
+    }
+
+    .f7-fluid {
+        font-size: var(--font-size-fluid-7)
+    }
+
+    .f8-fluid {
+        font-size: var(--font-size-fluid-8)
+    }
+
+    .f9-fluid {
+        font-size: var(--font-size-fluid-9)
+    }
+
+    .f10-fluid {
+        font-size: var(--font-size-fluid-10)
+    }
+
+    .f11-fluid {
+        font-size: var(--font-size-fluid-11)
+    }
+
+    .f12-fluid {
+        font-size: var(--font-size-fluid-12)
+    }
+
     @container (min-width:30em) {
         .f1-s {
             font-size: var(--font-size-1, .75rem)
@@ -15886,6 +15948,54 @@
 
         .f12-s {
             font-size: var(--font-size-12, 12rem)
+        }
+
+        .f1-fluid-s {
+            font-size: var(--font-size-fluid-1)
+        }
+
+        .f2-fluid-s {
+            font-size: var(--font-size-fluid-2)
+        }
+
+        .f3-fluid-s {
+            font-size: var(--font-size-fluid-3)
+        }
+
+        .f4-fluid-s {
+            font-size: var(--font-size-fluid-4)
+        }
+
+        .f5-fluid-s {
+            font-size: var(--font-size-fluid-5)
+        }
+
+        .f6-fluid-s {
+            font-size: var(--font-size-fluid-6)
+        }
+
+        .f7-fluid-s {
+            font-size: var(--font-size-fluid-7)
+        }
+
+        .f8-fluid-s {
+            font-size: var(--font-size-fluid-8)
+        }
+
+        .f9-fluid-s {
+            font-size: var(--font-size-fluid-9)
+        }
+
+        .f10-fluid-s {
+            font-size: var(--font-size-fluid-10)
+        }
+
+        .f11-fluid-s {
+            font-size: var(--font-size-fluid-11)
+        }
+
+        .f12-fluid-s {
+            font-size: var(--font-size-fluid-12)
         }
 
     }
@@ -15939,6 +16049,54 @@
             font-size: var(--font-size-12, 12rem)
         }
 
+        .f1-fluid-m {
+            font-size: var(--font-size-fluid-1)
+        }
+
+        .f2-fluid-m {
+            font-size: var(--font-size-fluid-2)
+        }
+
+        .f3-fluid-m {
+            font-size: var(--font-size-fluid-3)
+        }
+
+        .f4-fluid-m {
+            font-size: var(--font-size-fluid-4)
+        }
+
+        .f5-fluid-m {
+            font-size: var(--font-size-fluid-5)
+        }
+
+        .f6-fluid-m {
+            font-size: var(--font-size-fluid-6)
+        }
+
+        .f7-fluid-m {
+            font-size: var(--font-size-fluid-7)
+        }
+
+        .f8-fluid-m {
+            font-size: var(--font-size-fluid-8)
+        }
+
+        .f9-fluid-m {
+            font-size: var(--font-size-fluid-9)
+        }
+
+        .f10-fluid-m {
+            font-size: var(--font-size-fluid-10)
+        }
+
+        .f11-fluid-m {
+            font-size: var(--font-size-fluid-11)
+        }
+
+        .f12-fluid-m {
+            font-size: var(--font-size-fluid-12)
+        }
+
     }
 
     @container (min-width:64em) {
@@ -15988,6 +16146,54 @@
 
         .f12-l {
             font-size: var(--font-size-12, 12rem)
+        }
+
+        .f1-fluid-l {
+            font-size: var(--font-size-fluid-1)
+        }
+
+        .f2-fluid-l {
+            font-size: var(--font-size-fluid-2)
+        }
+
+        .f3-fluid-l {
+            font-size: var(--font-size-fluid-3)
+        }
+
+        .f4-fluid-l {
+            font-size: var(--font-size-fluid-4)
+        }
+
+        .f5-fluid-l {
+            font-size: var(--font-size-fluid-5)
+        }
+
+        .f6-fluid-l {
+            font-size: var(--font-size-fluid-6)
+        }
+
+        .f7-fluid-l {
+            font-size: var(--font-size-fluid-7)
+        }
+
+        .f8-fluid-l {
+            font-size: var(--font-size-fluid-8)
+        }
+
+        .f9-fluid-l {
+            font-size: var(--font-size-fluid-9)
+        }
+
+        .f10-fluid-l {
+            font-size: var(--font-size-fluid-10)
+        }
+
+        .f11-fluid-l {
+            font-size: var(--font-size-fluid-11)
+        }
+
+        .f12-fluid-l {
+            font-size: var(--font-size-fluid-12)
         }
 
     }

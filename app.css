@@ -40,10 +40,10 @@
         --brand-light: var(--indigo-5);
         --text-light: var(--slate-gray-0);
         --muted-light: var(--slate-gray-2);
-        --surface-0-light: var(--slate-gray-9);
-        --surface-1-light: var(--slate-gray-10);
+        --surface-0-light: var(--slate-gray-10);
+        --surface-1-light: hsl(from var(--slate-gray-10) h s calc(l + 5));
         --surface-2-light: var(--slate-gray-11);
-        --surface-3-light: #fefeff;
+        --surface-3-light: hsl(from var(--slate-gray-11) h s calc(l + 5));
         --error-light: var(--red-5);
         --success-light: var(--green-5);
         --notice-light: var(--blue-5);
@@ -52,10 +52,10 @@
         --brand-dark: var(--indigo-6);
         --text-dark: var(--slate-gray-11);
         --muted-dark: var(--slate-gray-6);
-        --surface-0-dark: #000002;
-        --surface-1-dark: var(--slate-gray-0);
+        --surface-0-dark: var(--slate-gray-0);
+        --surface-1-dark: hsl(from var(--slate-gray-1) h s calc(l - 5));
         --surface-2-dark: var(--slate-gray-1);
-        --surface-3-dark: var(--slate-gray-2);
+        --surface-3-dark: hsl(from var(--slate-gray-2) h s calc(l - 5));
         --error-dark: var(--red-6);
         --success-dark: var(--green-6);
         --notice-dark: var(--blue-6);
