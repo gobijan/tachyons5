@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en" color-scheme="dark" class="bg-surface-0 container-inline">
+  <head>
+    <link rel="stylesheet" href="tachyons5.css">
+    <link rel="stylesheet" href="app.css">
+    <meta charset="UTF-8">
+  </head>
+
+  <body class="f-body antialiased m5-l m0 p0">
+    <div class="bg-surface-1 p5-l p3 br4 shadow-4 flex flex-column g3">
+      <h1 class="f5 f9-l lh-title m0" id="name_output">Hello World!</h1>
+
+      <form onsubmit="updateGreeting(); return false;" class="w-100">
+        <div class="input-group">
+          <input
+            id="name_input"
+            type="text"
+            class="input br3 w-100"
+            placeholder="You Name..."
+            autocomplete="off"
+          >
+
+          <button type="submit" class="btn btn--brand">
+            Update <span class="dn dib-m">Greeting</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="input-group input-group--pill">
+        <input class="input w-100" type="search" placeholder="Search...">
+        <button class="btn btn--brand">Search</button>
+      </div>
+
+      <!-- Default input -->
+      <input class="input w-100" type="search" placeholder="Search...">
+
+      <!-- Rounded input -->
+      <input
+        class="input input--rounded w-100"
+        type="search"
+        placeholder="Search..."
+      >
+
+      <!-- Pill input -->
+      <input
+        class="input input--pill w-100"
+        type="search"
+        placeholder="Search..."
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1764351451091-f373a4a21119?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+        class="br3 mb5"
+      >
+
+      <div class="flex justify-between">
+        <!-- Dropdown 1 -->
+        <div class="dib">
+          <button
+            popovertarget="dropdown-1"
+            class="btn btn--brand"
+            style="anchor-name: --anchor-1;"
+            aria-haspopup="menu"
+            aria-controls="dropdown-1"
+          >
+            Actions ▾
+          </button>
+
+          <div
+            id="dropdown-1"
+            popover
+            class="dropdown-menu p3 bg-white shadow-3 br4 f3 fw5 bn"
+            style="--anchor: --anchor-1;"
+            role="menu"
+            aria-label="Actions"
+          >
+            <a
+              href="#"
+              role="menuitem"
+              class="
+                db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+                active-dim
+              "
+            >
+              Edit
+            </a>
+
+            <a
+              href="#"
+              role="menuitem"
+              class="
+                db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+                active-dim
+              "
+            >
+              Duplicate
+            </a>
+
+            <a
+              href="#"
+              role="menuitem"
+              class="
+                db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+                active-dim
+              "
+            >
+              Delete
+            </a>
+          </div>
+        </div>
+
+        <!-- Dropdown 2 - Right aligned -->
+        <div class="dib mis4">
+          <button
+            popovertarget="dropdown-2"
+            class="btn btn--surface"
+            style="anchor-name: --anchor-2;"
+            aria-haspopup="menu"
+            aria-controls="dropdown-2"
+          >
+            Right Aligned ▾
+          </button>
+
+          <div
+            id="dropdown-2"
+            popover
+            class="
+              dropdown-menu dropdown-menu--end p3 bg-white shadow-3 br4 f3
+              fw5 bn
+            "
+            style="--anchor: --anchor-2;"
+            role="menu"
+            aria-label="Options"
+          >
+            <a
+              href="#"
+              role="menuitem"
+              class="
+                db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+                active-dim
+              "
+            >
+              Option 1
+            </a>
+
+            <a
+              href="#"
+              role="menuitem"
+              class="
+                db p3 no-underline gray-3 hover-bg-gray-10 trans-bg br3
+                active-dim
+              "
+            >
+              Option 2
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function updateGreeting() {
+      const nameInput = document.getElementById('name_input');
+      const greeting = document.getElementById('name_output');
+      const name = nameInput.value.trim();
+
+      if (name) {
+        greeting.textContent = `Hello, ${name}!`;
+      } else {
+        greeting.textContent = 'Hello World';
+      }
+    }
+  </script>
+  </body>
+</html>

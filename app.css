@@ -746,24 +746,76 @@
     .input {
         appearance: none;
         background-color: var(--surface-0);
-        border: 1px solid var(--muted);
+        border: 2px solid var(--surface-2);
         border-radius: var(--border-radius-2);
         color: var(--text);
-        font-size: inherit;
-        font-family: inherit;
-        padding: var(--spacing-3) var(--spacing-3);
+        padding: var(--spacing-3);
         transition: border-color var(--duration-0) var(--easing-function-1),
             box-shadow var(--duration-0) var(--easing-function-1);
     }
 
+    /* Input group - input + button glued together */
+    .input-group {
+        display: flex;
+        --_input-group-radius: var(--input-group-radius, var(--border-radius-2));
+    }
+
+    .input-group>.input {
+        flex: 1;
+        min-width: 0;
+        border-start-start-radius: var(--_input-group-radius);
+        border-end-start-radius: var(--_input-group-radius);
+        border-start-end-radius: 0;
+        border-end-end-radius: 0;
+        border-inline-end: none;
+    }
+
+    .input-group>.btn {
+        border-start-start-radius: 0;
+        border-end-start-radius: 0;
+        border-start-end-radius: var(--_input-group-radius);
+        border-end-end-radius: var(--_input-group-radius);
+    }
+
+    .input-group>.input:focus {
+        z-index: 1;
+        /* Keep focus ring visible */
+    }
+
+    /* Input group radius modifiers */
+    .input-group--rounded {
+        --input-group-radius: var(--border-radius-4);
+    }
+
+    .input-group--pill {
+        --input-group-radius: var(--border-radius-11);
+    }
+
+    /* Input size variants */
+    .input--sm {
+        font-size: var(--font-size-2);
+    }
+
+    .input--lg {
+        font-size: var(--font-size-4);
+    }
+
+    .input--rounded {
+        border-radius: var(--border-radius-4);
+    }
+
+    .input--pill {
+        border-radius: var(--border-radius-11);
+    }
+
     .input:hover {
-        border-color: var(--text);
+        border-color: var(--surface-3);
     }
 
     .input:focus {
         outline: none;
         border-color: var(--brand);
-        box-shadow: 0 0 0 3px hsl(from var(--brand) h s l / 0.2);
+        /* box-shadow: 0 0 0 3px hsl(from var(--brand) h s l / 0.2); */
     }
 
     .input:disabled {
@@ -924,6 +976,8 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
+        white-space: nowrap;
         gap: var(--spacing-2);
         padding: var(--spacing-3) var(--spacing-4);
         font-family: inherit;
