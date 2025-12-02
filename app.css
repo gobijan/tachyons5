@@ -33,6 +33,9 @@
 */
 
     :root {
+        /* Default component radius */
+        --default-radius: var(--border-radius-11);
+
         /* Light theme colors */
         --brand-light: var(--indigo-5);
         --text-light: var(--slate-gray-0);
@@ -747,7 +750,7 @@
         appearance: none;
         background-color: var(--surface-0);
         border: 2px solid var(--surface-2);
-        border-radius: var(--border-radius-2);
+        border-radius: min(var(--default-radius), var(--border-radius-3));
         color: var(--text);
         padding: var(--spacing-3);
         transition: border-color var(--duration-0) var(--easing-function-1),
@@ -757,7 +760,7 @@
     /* Input group - input + button glued together */
     .input-group {
         display: flex;
-        --_input-group-radius: var(--input-group-radius, var(--border-radius-2));
+        --_input-group-radius: var(--input-group-radius, var(--default-radius));
     }
 
     .input-group>.input {
@@ -926,7 +929,7 @@
         appearance: none;
         width: 2.5em;
         height: 1.5em;
-        border-radius: 1em;
+        border-radius: var(--default-radius);
         background-color: var(--muted);
         cursor: pointer;
         position: relative;
@@ -938,7 +941,7 @@
         position: absolute;
         width: 1.1em;
         height: 1.1em;
-        border-radius: 50%;
+        border-radius: var(--default-radius);
         background-color: var(--surface-0);
         top: 0.2em;
         left: 0.2em;
@@ -986,7 +989,7 @@
         line-height: 1;
         text-decoration: none;
         border: 1px solid transparent;
-        border-radius: var(--border-radius-11);
+        border-radius: var(--default-radius);
         cursor: pointer;
         transition:
             background-color var(--duration-0) var(--easing-function-1),
