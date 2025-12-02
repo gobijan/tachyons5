@@ -444,6 +444,12 @@
 
 */
 
+    /* Dropdown container - provides positioning context for fallback */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
     .dropdown-menu {
         opacity: 1;
         transform: translateY(0);
@@ -451,12 +457,25 @@
             opacity var(--duration-0) var(--easing-function-1),
             transform var(--duration-0) var(--easing-function-1),
             display var(--duration-0) allow-discrete;
-        position-anchor: var(--anchor);
-        position-try-fallbacks: flip-block, flip-inline;
-        top: anchor(bottom);
-        left: anchor(left);
         margin: 0;
+        /* Fallback positioning - works without anchor positioning */
         position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: var(--spacing-2);
+    }
+
+    /* Modern browsers with anchor positioning support */
+    @supports (anchor-name: --test) {
+        .dropdown-menu {
+            position: fixed;
+            inset: unset;
+            top: anchor(bottom);
+            left: anchor(left);
+            margin-top: var(--spacing-2);
+            position-anchor: var(--anchor);
+            position-try-fallbacks: flip-block, flip-inline;
+        }
     }
 
     @starting-style {
