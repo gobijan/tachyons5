@@ -43,9 +43,9 @@
         --surface-base-light: var(--slate-gray-10);
 
         --surface-0-light: var(--surface-base-light);
-        --surface-1-light: hsl(from var(--surface-base-light) h s calc(l + 5));
-        --surface-2-light: hsl(from var(--surface-base-light) h s calc(l + 10));
-        --surface-3-light: hsl(from var(--surface-base-light) h s calc(l + 15));
+        --surface-1-light: hsl(from var(--surface-base-light) h s calc(l + 4));
+        --surface-2-light: hsl(from var(--surface-base-light) h s calc(l + 8));
+        --surface-3-light: hsl(from var(--surface-base-light) h s calc(l + 12));
         --error-light: var(--red-5);
         --success-light: var(--green-5);
         --notice-light: var(--blue-5);
@@ -57,9 +57,9 @@
         --surface-base-dark: var(--slate-gray-0);
 
         --surface-0-dark: var(--surface-base-dark);
-        --surface-1-dark: hsl(from var(--surface-base-dark) h s calc(l + 5));
-        --surface-2-dark: hsl(from var(--surface-base-dark) h s calc(l + 10));
-        --surface-3-dark: hsl(from var(--surface-base-dark) h s calc(l + 15));
+        --surface-1-dark: hsl(from var(--surface-base-dark) h s calc(l + 4));
+        --surface-2-dark: hsl(from var(--surface-base-dark) h s calc(l + 8));
+        --surface-3-dark: hsl(from var(--surface-base-dark) h s calc(l + 12));
         --error-dark: var(--red-6);
         --success-dark: var(--green-6);
         --notice-dark: var(--blue-6);
@@ -1049,22 +1049,22 @@
     }
 
     .btn--surface {
-        background-color: var(--surface-2);
+        background-color: var(--surface-3);
         color: var(--text);
     }
 
     .btn--surface:hover:not(:disabled) {
-        background-color: var(--surface-3);
+        background-color: var(--surface-1);
     }
 
     .btn--outline {
         background-color: transparent;
-        border-color: var(--muted);
+        border-color: var(--surface-3);
         color: var(--text);
     }
 
     .btn--outline:hover:not(:disabled) {
-        border-color: var(--text);
+        border-color: var(--surface-2);
         background-color: var(--surface-1);
     }
 
