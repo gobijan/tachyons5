@@ -748,7 +748,7 @@
 
     .input {
         appearance: none;
-        background-color: var(--surface-0);
+        background-color: var(--surface-2);
         border: 2px solid var(--surface-2);
         border-radius: min(var(--default-radius), var(--border-radius-3));
         color: var(--text);
@@ -1012,7 +1012,6 @@
     }
 
     .btn:active:not(:disabled) {
-        transform: scale(0.98);
         filter: brightness(0.9);
     }
 
