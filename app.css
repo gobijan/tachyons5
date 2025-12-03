@@ -468,33 +468,24 @@
 
 */
 
-        /* Base link styles - bare <a> tags and explicit .link class */
-        a:not([class]),
-        .link {
+        /* Base link styles - bare <a> tags and explicit .link class from tachyons5 */
+        a:not([class]) {
+            text-decoration: none;
             color: var(--text);
-            text-decoration: underline;
-            text-decoration-color: transparent;
-            text-underline-offset: 0.2em;
-            font-weight: 600;
-            transition:
-                color var(--duration-0) var(--easing-function-1),
-                text-decoration-color var(--duration-0) var(--easing-function-1);
-
-            &:hover {
-                color: hsl(from var(--text) h s calc(l - 15));
-                text-decoration-color: currentColor;
-            }
-
-            &:active {
-                color: hsl(from var(--text) h s calc(l - 25));
-            }
+            font-weight: 500;
         }
 
-        a:not([class]):focus-visible,
-        .link:focus-visible {
-            outline: 2px solid var(--brand);
-            outline-offset: 2px;
-            border-radius: var(--border-radius-1);
+        a:not([class]),
+        a:not([class]):active,
+        a:not([class]):focus,
+        a:not([class]):hover,
+        a:not([class]):link,
+        a:not([class]):visited {
+            transition: all .15s ease-in
+        }
+
+        a:not([class]):focus {
+            outline: 1px dotted currentColor
         }
 
         /* Brand link - uses brand color */
@@ -588,8 +579,7 @@
                 box-shadow: var(--box-shadow-3);
                 pointer-events: none;
                 opacity: 0;
-                transition:
-                    opacity var(--duration-0) var(--easing-function-1),
+                transition: opacity var(--duration-0) var(--easing-function-1),
                     transform var(--duration-0) var(--easing-function-1);
                 transition-delay: 0s;
                 /* Default position: bottom */
@@ -677,8 +667,7 @@
         .dropdown-menu {
             opacity: 1;
             transform: translateY(0);
-            transition:
-                opacity var(--duration-0) var(--easing-function-1),
+            transition: opacity var(--duration-0) var(--easing-function-1),
                 transform var(--duration-0) var(--easing-function-1);
             /* Reset popover default positioning */
             margin: 0;
@@ -723,8 +712,7 @@
                 left: anchor(left);
                 position-anchor: var(--anchor);
                 position-try-fallbacks: flip-block, flip-inline;
-                transition:
-                    opacity var(--duration-0) var(--easing-function-1),
+                transition: opacity var(--duration-0) var(--easing-function-1),
                     transform var(--duration-0) var(--easing-function-1),
                     display var(--duration-0) allow-discrete;
             }
@@ -777,8 +765,7 @@
             box-shadow: var(--box-shadow-4);
             opacity: 1;
             transform: translateY(0) scale(1);
-            transition:
-                opacity var(--duration-0) var(--easing-function-3),
+            transition: opacity var(--duration-0) var(--easing-function-3),
                 transform var(--duration-0) var(--easing-function-3),
                 overlay var(--duration-2) allow-discrete,
                 display var(--duration-2) allow-discrete;
@@ -787,8 +774,7 @@
         .dialog::backdrop {
             background-color: hsl(0 0% 0% / 0.5);
             opacity: 1;
-            transition:
-                opacity var(--duration-0) var(--easing-function-3),
+            transition: opacity var(--duration-0) var(--easing-function-3),
                 overlay var(--duration-2) allow-discrete,
                 display var(--duration-2) allow-discrete;
         }
@@ -857,8 +843,7 @@
             box-shadow: var(--box-shadow-4);
             margin: 0;
             opacity: 1;
-            transition:
-                opacity var(--duration-0) var(--easing-function-3),
+            transition: opacity var(--duration-0) var(--easing-function-3),
                 transform var(--duration-0) var(--easing-function-3),
                 overlay var(--duration-0) allow-discrete,
                 display var(--duration-0) allow-discrete;
@@ -867,8 +852,7 @@
         .drawer::backdrop {
             background-color: hsl(0 0% 0% / 0.5);
             opacity: 1;
-            transition:
-                opacity var(--duration-0) var(--easing-function-3),
+            transition: opacity var(--duration-0) var(--easing-function-3),
                 overlay var(--duration-0) allow-discrete,
                 display var(--duration-0) allow-discrete;
         }
@@ -1242,8 +1226,7 @@
             border: 1px solid transparent;
             border-radius: var(--default-radius);
             cursor: pointer;
-            transition:
-                background-color var(--duration-0) var(--easing-function-1),
+            transition: background-color var(--duration-0) var(--easing-function-1),
                 border-color var(--duration-0) var(--easing-function-1),
                 color var(--duration-0) var(--easing-function-1),
                 box-shadow var(--duration-0) var(--easing-function-1),
