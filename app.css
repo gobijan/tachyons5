@@ -19,7 +19,7 @@
 */
 
 /* Extend layer order from tachyons5.css */
-@layer tokens, utilities, components, overrides;
+@layer tokens, components, utilities, overrides;
 
 @layer tokens {
 

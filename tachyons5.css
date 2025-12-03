@@ -1,6 +1,6 @@
 /*! TACHYONS v5.1.0 | https://github.com/gobijan/tachyons5 */
 
-/* CSS Layers - Define cascade order */
+/* CSS Layers - Define cascade order (utilities highest, overrides reserved for apps) */
 @layer base, tokens, utilities, overrides;
 
 @layer base {
