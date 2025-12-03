@@ -1224,6 +1224,15 @@
             background-color: hsl(from var(--success) h s calc(l - 5));
         }
 
+        .btn--dark {
+            background-color: var(--surface-0-dark);
+            color: var(--text-dark);
+        }
+
+        .btn--dark:hover:not(:disabled) {
+            background-color: hsl(from var(--surface-0-dark) h s calc(l - 5));
+        }
+
         /* Button sizes */
         .btn--sm {
             padding: var(--spacing-1) var(--spacing-3);
