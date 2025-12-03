@@ -70,6 +70,7 @@
         color-scheme: light;
         --brand: var(--brand-light);
         --text: var(--text-light);
+        --link: var(--text);
         --muted: var(--muted-light);
         --surface-0: var(--surface-0-light);
         --surface-1: var(--surface-1-light);
@@ -144,20 +145,26 @@
         --border-color: var(--border-color-dark);
     }
 
+    /* ==========================================================================
+   BASE TYPOGRAPHY
+   ========================================================================== */
+
+    body {
+        line-height: var(--line-height-body);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: var(--line-height-heading);
+    }
+
 }
 
 /* end @layer tokens */
-
-@layer overrides {
-    /* ==========================================================================
-   APP-SPECIFIC OVERRIDES
-   ========================================================================== */
-
-    /* Add any app-specific CSS overrides here that need to take precedence */
-    body {
-        line-height: var(--line-height-solid);
-    }
-}
 
 @layer utilities {
 
@@ -480,9 +487,10 @@
 */
 
         /* Base link styles - bare <a> tags and explicit .link class from tachyons5 */
-        a:not([class]) {
+        a:not([class]),
+        .link {
             text-decoration: none;
-            color: var(--text);
+            color: var(--link);
             font-weight: 500;
         }
 
@@ -491,11 +499,18 @@
         a:not([class]):focus,
         a:not([class]):hover,
         a:not([class]):link,
-        a:not([class]):visited {
+        a:not([class]):visited,
+        .link,
+        .link:active,
+        .link:focus,
+        .link:hover,
+        .link:link,
+        .link:visited {
             transition: all .15s ease-in
         }
 
-        a:not([class]):focus {
+        a:not([class]):focus,
+        .link:focus {
             outline: 1px dotted currentColor
         }
 
