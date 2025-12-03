@@ -456,6 +456,106 @@
    ========================================================================== */
 
         /* ==========================================================================
+   LINKS
+   ==========================================================================
+
+   Styled hyperlinks with hover effects and variants.
+   
+   Usage:
+   <a href="#" class="link">Default link</a>
+   <a href="#" class="link link--muted">Muted link</a>
+   <a href="#" class="link link--underline">Always underlined</a>
+
+*/
+
+        /* Base link styles - bare <a> tags and explicit .link class */
+        a:not([class]),
+        .link {
+            color: var(--text);
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            text-underline-offset: 0.2em;
+            font-weight: 600;
+            transition:
+                color var(--duration-0) var(--easing-function-1),
+                text-decoration-color var(--duration-0) var(--easing-function-1);
+        }
+
+        a:not([class]):hover,
+        .link:hover {
+            color: hsl(from var(--text) h s calc(l - 15));
+            text-decoration-color: currentColor;
+        }
+
+        a:not([class]):active,
+        .link:active {
+            color: hsl(from var(--text) h s calc(l - 25));
+        }
+
+        a:not([class]):focus-visible,
+        .link:focus-visible {
+            outline: 2px solid var(--brand);
+            outline-offset: 2px;
+            border-radius: var(--border-radius-1);
+        }
+
+        /* Brand link - uses brand color */
+        .link--brand {
+            color: var(--brand);
+        }
+
+        .link--brand:hover {
+            color: hsl(from var(--brand) h s calc(l - 10));
+        }
+
+        .link--brand:active {
+            color: hsl(from var(--brand) h s calc(l - 20));
+        }
+
+        /* Muted link - subtle, uses muted color */
+        .link--muted {
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .link--muted:hover {
+            color: var(--text);
+        }
+
+        .link--muted:active {
+            color: hsl(from var(--text) h s calc(l - 10));
+        }
+
+        /* Text link - inherits color, just adds underline on hover */
+        .link--text {
+            color: inherit;
+        }
+
+        .link--text:hover {
+            color: var(--brand);
+        }
+
+        .link--text:active {
+            color: hsl(from var(--brand) h s calc(l - 20));
+        }
+
+        /* Always underlined */
+        .link--underline {
+            text-decoration: underline !important;
+            text-decoration-color: hsl(from var(--brand) h s l / 0.4);
+        }
+
+        .link--underline:hover {
+            text-decoration-color: currentColor;
+        }
+
+        /* External link indicator */
+        .link--external::after {
+            content: " ↗";
+            font-size: 0.85em;
+        }
+
+        /* ==========================================================================
    TOOLTIP
    ==========================================================================
 
