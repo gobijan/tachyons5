@@ -15885,51 +15885,51 @@
     }
 
     /* Fluid typography utilities */
-    .f1-fluid {
+    .ff1 {
         font-size: var(--font-size-fluid-1)
     }
 
-    .f2-fluid {
+    .ff2 {
         font-size: var(--font-size-fluid-2)
     }
 
-    .f3-fluid {
+    .ff3 {
         font-size: var(--font-size-fluid-3)
     }
 
-    .f4-fluid {
+    .ff4 {
         font-size: var(--font-size-fluid-4)
     }
 
-    .f5-fluid {
+    .ff5 {
         font-size: var(--font-size-fluid-5)
     }
 
-    .f6-fluid {
+    .ff6 {
         font-size: var(--font-size-fluid-6)
     }
 
-    .f7-fluid {
+    .ff7 {
         font-size: var(--font-size-fluid-7)
     }
 
-    .f8-fluid {
+    .ff8 {
         font-size: var(--font-size-fluid-8)
     }
 
-    .f9-fluid {
+    .ff9 {
         font-size: var(--font-size-fluid-9)
     }
 
-    .f10-fluid {
+    .ff10 {
         font-size: var(--font-size-fluid-10)
     }
 
-    .f11-fluid {
+    .ff11 {
         font-size: var(--font-size-fluid-11)
     }
 
-    .f12-fluid {
+    .ff12 {
         font-size: var(--font-size-fluid-12)
     }
 
@@ -15982,51 +15982,51 @@
             font-size: var(--font-size-12, 12rem)
         }
 
-        .f1-fluid-s {
+        .ff1-s {
             font-size: var(--font-size-fluid-1)
         }
 
-        .f2-fluid-s {
+        .ff2-s {
             font-size: var(--font-size-fluid-2)
         }
 
-        .f3-fluid-s {
+        .ff3-s {
             font-size: var(--font-size-fluid-3)
         }
 
-        .f4-fluid-s {
+        .ff4-s {
             font-size: var(--font-size-fluid-4)
         }
 
-        .f5-fluid-s {
+        .ff5-s {
             font-size: var(--font-size-fluid-5)
         }
 
-        .f6-fluid-s {
+        .ff6-s {
             font-size: var(--font-size-fluid-6)
         }
 
-        .f7-fluid-s {
+        .ff7-s {
             font-size: var(--font-size-fluid-7)
         }
 
-        .f8-fluid-s {
+        .ff8-s {
             font-size: var(--font-size-fluid-8)
         }
 
-        .f9-fluid-s {
+        .ff9-s {
             font-size: var(--font-size-fluid-9)
         }
 
-        .f10-fluid-s {
+        .ff10-s {
             font-size: var(--font-size-fluid-10)
         }
 
-        .f11-fluid-s {
+        .ff11-s {
             font-size: var(--font-size-fluid-11)
         }
 
-        .f12-fluid-s {
+        .ff12-s {
             font-size: var(--font-size-fluid-12)
         }
 
@@ -16081,51 +16081,51 @@
             font-size: var(--font-size-12, 12rem)
         }
 
-        .f1-fluid-m {
+        .ff1-m {
             font-size: var(--font-size-fluid-1)
         }
 
-        .f2-fluid-m {
+        .ff2-m {
             font-size: var(--font-size-fluid-2)
         }
 
-        .f3-fluid-m {
+        .ff3-m {
             font-size: var(--font-size-fluid-3)
         }
 
-        .f4-fluid-m {
+        .ff4-m {
             font-size: var(--font-size-fluid-4)
         }
 
-        .f5-fluid-m {
+        .ff5-m {
             font-size: var(--font-size-fluid-5)
         }
 
-        .f6-fluid-m {
+        .ff6-m {
             font-size: var(--font-size-fluid-6)
         }
 
-        .f7-fluid-m {
+        .ff7-m {
             font-size: var(--font-size-fluid-7)
         }
 
-        .f8-fluid-m {
+        .ff8-m {
             font-size: var(--font-size-fluid-8)
         }
 
-        .f9-fluid-m {
+        .ff9-m {
             font-size: var(--font-size-fluid-9)
         }
 
-        .f10-fluid-m {
+        .ff10-m {
             font-size: var(--font-size-fluid-10)
         }
 
-        .f11-fluid-m {
+        .ff11-m {
             font-size: var(--font-size-fluid-11)
         }
 
-        .f12-fluid-m {
+        .ff12-m {
             font-size: var(--font-size-fluid-12)
         }
 
@@ -16180,51 +16180,51 @@
             font-size: var(--font-size-12, 12rem)
         }
 
-        .f1-fluid-l {
+        .ff1-l {
             font-size: var(--font-size-fluid-1)
         }
 
-        .f2-fluid-l {
+        .ff2-l {
             font-size: var(--font-size-fluid-2)
         }
 
-        .f3-fluid-l {
+        .ff3-l {
             font-size: var(--font-size-fluid-3)
         }
 
-        .f4-fluid-l {
+        .ff4-l {
             font-size: var(--font-size-fluid-4)
         }
 
-        .f5-fluid-l {
+        .ff5-l {
             font-size: var(--font-size-fluid-5)
         }
 
-        .f6-fluid-l {
+        .ff6-l {
             font-size: var(--font-size-fluid-6)
         }
 
-        .f7-fluid-l {
+        .ff7-l {
             font-size: var(--font-size-fluid-7)
         }
 
-        .f8-fluid-l {
+        .ff8-l {
             font-size: var(--font-size-fluid-8)
         }
 
-        .f9-fluid-l {
+        .ff9-l {
             font-size: var(--font-size-fluid-9)
         }
 
-        .f10-fluid-l {
+        .ff10-l {
             font-size: var(--font-size-fluid-10)
         }
 
-        .f11-fluid-l {
+        .ff11-l {
             font-size: var(--font-size-fluid-11)
         }
 
-        .f12-fluid-l {
+        .ff12-l {
             font-size: var(--font-size-fluid-12)
         }
 
