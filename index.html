@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="scroll-smooth container-inline" color-scheme="">
+<html lang="en" class="scroll-smooth container-inline" data-theme="">
 
 <head>
   <meta charset="UTF-8">
@@ -26,22 +26,26 @@
     <main class="grid cols-1 g5">
       <!-- Theme Toggle -->
       <section class="bg-surface-2 br3 p4 shadow-2 grid cols-1 g3">
-        <h2 class="">🌓 Dark Mode Toggle</h2>
+        <h2 class="">🌓 Theme Switcher</h2>
 
         <p class="muted mb3 f3">
-          Click to switch between light and dark themes.
+          Click to switch between light, dim, dark, or system theme.
         </p>
 
-        <div class="flex g3 items-center">
-          <button onclick="document.documentElement.setAttribute('color-scheme', 'light')" class="btn btn--outline">
+        <div class="flex g3 items-center flex-wrap">
+          <button onclick="document.documentElement.setAttribute('data-theme', 'light')" class="btn btn--outline">
             ☀️ Light
           </button>
 
-          <button onclick="document.documentElement.setAttribute('color-scheme', 'dark')" class="btn btn--outline">
+          <button onclick="document.documentElement.setAttribute('data-theme', 'dim')" class="btn btn--outline">
+            🌅 Dim
+          </button>
+
+          <button onclick="document.documentElement.setAttribute('data-theme', 'dark')" class="btn btn--outline">
             🌙 Dark
           </button>
 
-          <button onclick="document.documentElement.removeAttribute('color-scheme')" class="btn btn--outline">
+          <button onclick="document.documentElement.removeAttribute('data-theme')" class="btn btn--outline">
             💻 System
           </button>
         </div>
