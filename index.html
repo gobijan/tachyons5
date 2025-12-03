@@ -923,6 +923,33 @@
         }
       });
     });
+
+    // Dropdown positioning fallback for browsers without anchor positioning (Firefox)
+    if (!CSS.supports('anchor-name', '--test')) {
+      document.querySelectorAll('[popovertarget]').forEach(button => {
+        button.addEventListener('click', () => {
+          const popoverId = button.getAttribute('popovertarget');
+          const popover = document.getElementById(popoverId);
+          if (popover) {
+            const rect = button.getBoundingClientRect();
+            const isTop = popover.classList.contains('dropdown-menu--top');
+            const isEnd = popover.classList.contains('dropdown-menu--end');
+            
+            if (isTop) {
+              popover.style.setProperty('--dropdown-bottom', `${window.innerHeight - rect.top}px`);
+            } else {
+              popover.style.setProperty('--dropdown-top', `${rect.bottom}px`);
+            }
+            
+            if (isEnd) {
+              popover.style.setProperty('--dropdown-right', `${window.innerWidth - rect.right}px`);
+            } else {
+              popover.style.setProperty('--dropdown-left', `${rect.left}px`);
+            }
+          }
+        });
+      });
+    }
   </script>
 </body>
 

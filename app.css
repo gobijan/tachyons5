@@ -475,60 +475,76 @@
             transform: translateY(0);
             transition:
                 opacity var(--duration-0) var(--easing-function-1),
-                transform var(--duration-0) var(--easing-function-1),
-                display var(--duration-0) allow-discrete;
+                transform var(--duration-0) var(--easing-function-1);
+            /* Reset popover default positioning */
             margin: 0;
-            /* Fallback positioning - works without anchor positioning */
-            position: absolute;
-            top: 100%;
-            left: 0;
+            padding: 0;
+            border: none;
+            inset: unset;
+            /* Fallback: position relative to button using JS-set custom properties */
+            position: fixed;
+            top: var(--dropdown-top, 0);
+            left: var(--dropdown-left, 0);
             margin-top: var(--spacing-2);
+        }
+
+        /* Hide when not open - works for all browsers with popover support */
+        .dropdown-menu:not(:popover-open) {
+            opacity: 0;
+            transform: translateY(calc(-1 * var(--spacing-2)));
+            pointer-events: none;
+        }
+
+        /* Alternative positions - fallback values */
+        .dropdown-menu--end {
+            left: auto;
+            right: var(--dropdown-right, 0);
+        }
+
+        .dropdown-menu--top {
+            top: auto;
+            bottom: var(--dropdown-bottom, 0);
+            margin-top: 0;
+            margin-bottom: var(--spacing-2);
+        }
+
+        .dropdown-menu--top:not(:popover-open) {
+            transform: translateY(var(--spacing-2));
         }
 
         /* Modern browsers with anchor positioning support */
         @supports (anchor-name: --test) {
             .dropdown-menu {
-                position: fixed;
-                inset: unset;
                 top: anchor(bottom);
                 left: anchor(left);
-                margin-top: var(--spacing-2);
                 position-anchor: var(--anchor);
                 position-try-fallbacks: flip-block, flip-inline;
+                transition:
+                    opacity var(--duration-0) var(--easing-function-1),
+                    transform var(--duration-0) var(--easing-function-1),
+                    display var(--duration-0) allow-discrete;
             }
-        }
 
-        @starting-style {
-            .dropdown-menu:popover-open {
-                opacity: 0;
-                transform: translateY(calc(-1 * var(--spacing-2)));
+            .dropdown-menu--end {
+                left: auto;
+                right: anchor(right);
             }
-        }
 
-        .dropdown-menu:not(:popover-open) {
-            opacity: 0;
-            transform: translateY(calc(-1 * var(--spacing-2)));
-        }
-
-        /* Alternative anchor positions */
-        .dropdown-menu--end {
-            left: auto;
-            right: anchor(right);
-        }
-
-        .dropdown-menu--top {
-            top: auto;
-            bottom: anchor(top);
-        }
-
-        @starting-style {
-            .dropdown-menu--top:popover-open {
-                transform: translateY(var(--spacing-2));
+            .dropdown-menu--top {
+                top: auto;
+                bottom: anchor(top);
             }
-        }
 
-        .dropdown-menu--top:not(:popover-open) {
-            transform: translateY(var(--spacing-2));
+            @starting-style {
+                .dropdown-menu:popover-open {
+                    opacity: 0;
+                    transform: translateY(calc(-1 * var(--spacing-2)));
+                }
+
+                .dropdown-menu--top:popover-open {
+                    transform: translateY(var(--spacing-2));
+                }
+            }
         }
 
         /* ==========================================================================
