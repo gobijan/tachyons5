@@ -47,6 +47,37 @@
         </div>
       </section>
 
+      <!-- Tooltips -->
+      <section class="bg-surface-2 br3 p4 shadow-2">
+        <h2>💬 Tooltips</h2>
+
+        <p class="muted mb3 f3">
+          CSS-only tooltips with positions. Hover or focus to reveal.
+        </p>
+
+        <div class="flex g4 flex-wrap items-center">
+          <button data-tooltip="This is a tooltip!" class="btn btn--brand">
+            Bottom (default)
+          </button>
+
+          <button data-tooltip="Tooltip above" data-tooltip-position="top" class="btn btn--surface">
+            Top
+          </button>
+
+          <button data-tooltip="Tooltip on left" data-tooltip-position="left" class="btn btn--outline">
+            Left
+          </button>
+
+          <button data-tooltip="Tooltip on right" data-tooltip-position="right" class="btn btn--ghost">
+            Right
+          </button>
+
+          <span data-tooltip="Helpful information" class="muted pointer">
+            ℹ️ Hover me
+          </span>
+        </div>
+      </section>
+
       <!-- Dropdown Menus -->
       <section class="bg-surface-2 br3 p4 shadow-2">
         <h2>📋 Dropdown Menus</h2>
@@ -934,13 +965,13 @@
             const rect = button.getBoundingClientRect();
             const isTop = popover.classList.contains('dropdown-menu--top');
             const isEnd = popover.classList.contains('dropdown-menu--end');
-            
+
             if (isTop) {
               popover.style.setProperty('--dropdown-bottom', `${window.innerHeight - rect.top}px`);
             } else {
               popover.style.setProperty('--dropdown-top', `${rect.bottom}px`);
             }
-            
+
             if (isEnd) {
               popover.style.setProperty('--dropdown-right', `${window.innerWidth - rect.right}px`);
             } else {
