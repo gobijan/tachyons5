@@ -1071,7 +1071,7 @@
 
         .btn--outline {
             background-color: transparent;
-            border-color: var(--surface-3);
+            border-color: var(--border-color);
             color: var(--text);
         }
 
@@ -1238,14 +1238,14 @@
         .table td {
             padding: var(--spacing-3) var(--spacing-4);
             vertical-align: top;
-            border-bottom: 1px solid var(--surface-1);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .table th {
             font-weight: 600;
             color: var(--text);
             background-color: var(--surface-1);
-            border-bottom: 2px solid var(--surface-0);
+            border-bottom: 2px solid var(--border-color);
         }
 
         .table td {
