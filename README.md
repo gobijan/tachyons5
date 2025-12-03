@@ -125,7 +125,9 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 ### Typography
 | Class | Description |
 |-------|-------------|
-| `f1` - `f7` | Font sizes (3rem → 0.75rem) |
+| `f1` - `f12` | Fixed font sizes (0.75rem → 12rem) |
+| `ff1` - `ff12` | Fluid font sizes (scale with viewport) |
+| `ff*-s`, `ff*-m`, `ff*-l` | Responsive fluid fonts (container queries) |
 | `fw1` - `fw9` | Font weights |
 | `ts`, `tc`, `te`, `tj` | Text align (start, center, end, justify) |
 | `ttc`, `ttu`, `ttl` | Text transform |

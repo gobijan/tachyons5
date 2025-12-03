@@ -148,6 +148,17 @@
 
 /* end @layer tokens */
 
+@layer overrides {
+    /* ==========================================================================
+   APP-SPECIFIC OVERRIDES
+   ========================================================================== */
+
+    /* Add any app-specific CSS overrides here that need to take precedence */
+    body {
+        line-height: var(--line-height-solid);
+    }
+}
+
 @layer utilities {
 
     /* ==========================================================================
