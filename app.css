@@ -13,8 +13,8 @@
 
     CSS Layers (in cascade order):
     - tokens: Theme variables (builds on tachyons5 tokens)
-    - utilities: Semantic utility classes (builds on tachyons5 utilities)
     - components: UI components (dropdown, dialog, buttons, etc.)
+    - utilities: Semantic utility classes (builds on tachyons5 utilities)
     - overrides: App-specific overrides that need to win
 */
 
@@ -753,16 +753,22 @@
 */
 
         .dialog {
+            --_dialog-bg: var(--dialog-bg, var(--surface-1));
+            --_dialog-color: var(--dialog-color, var(--text));
+            --_dialog-radius: var(--dialog-radius, var(--border-radius-3));
+            --_dialog-padding: var(--dialog-padding, var(--spacing-5));
+            --_dialog-shadow: var(--dialog-shadow, var(--box-shadow-4));
+            --_dialog-backdrop: var(--dialog-backdrop, hsl(0 0% 0% / 0.5));
             border: none;
-            border-radius: var(--border-radius-3);
-            padding: var(--spacing-5);
-            background-color: var(--surface-1);
-            color: var(--text);
+            border-radius: var(--_dialog-radius);
+            padding: var(--_dialog-padding);
+            background-color: var(--_dialog-bg);
+            color: var(--_dialog-color);
             max-width: min(90vw, 32rem);
             max-height: 85vh;
             max-height: 85dvh;
             overflow: auto;
-            box-shadow: var(--box-shadow-4);
+            box-shadow: var(--_dialog-shadow);
             opacity: 1;
             transform: translateY(0) scale(1);
             transition: opacity var(--duration-0) var(--easing-function-3),
@@ -772,7 +778,7 @@
         }
 
         .dialog::backdrop {
-            background-color: hsl(0 0% 0% / 0.5);
+            background-color: var(--_dialog-backdrop);
             opacity: 1;
             transition: opacity var(--duration-0) var(--easing-function-3),
                 overlay var(--duration-2) allow-discrete,
@@ -836,11 +842,17 @@
 */
 
         .drawer {
+            --_drawer-bg: var(--drawer-bg, var(--surface-1));
+            --_drawer-color: var(--drawer-color, var(--text));
+            --_drawer-radius: var(--drawer-radius, var(--border-radius-3));
+            --_drawer-padding: var(--drawer-padding, var(--spacing-4));
+            --_drawer-shadow: var(--drawer-shadow, var(--box-shadow-4));
+            --_drawer-backdrop: var(--drawer-backdrop, hsl(0 0% 0% / 0.5));
             border: none;
-            padding: var(--spacing-4);
-            background-color: var(--surface-1);
-            color: var(--text);
-            box-shadow: var(--box-shadow-4);
+            padding: var(--_drawer-padding);
+            background-color: var(--_drawer-bg);
+            color: var(--_drawer-color);
+            box-shadow: var(--_drawer-shadow);
             margin: 0;
             opacity: 1;
             transition: opacity var(--duration-0) var(--easing-function-3),
@@ -850,7 +862,7 @@
         }
 
         .drawer::backdrop {
-            background-color: hsl(0 0% 0% / 0.5);
+            background-color: var(--_drawer-backdrop);
             opacity: 1;
             transition: opacity var(--duration-0) var(--easing-function-3),
                 overlay var(--duration-0) allow-discrete,
@@ -869,7 +881,7 @@
             max-height: 100vh;
             max-height: 100dvh;
             height: 100%;
-            border-radius: 0 var(--border-radius-3) var(--border-radius-3) 0;
+            border-radius: 0 var(--_drawer-radius) var(--_drawer-radius) 0;
             transform: translateX(0);
         }
 
@@ -893,7 +905,7 @@
             max-height: 100vh;
             max-height: 100dvh;
             height: 100%;
-            border-radius: var(--border-radius-3) 0 0 var(--border-radius-3);
+            border-radius: var(--_drawer-radius) 0 0 var(--_drawer-radius);
             transform: translateX(0);
         }
 
@@ -917,7 +929,7 @@
             max-width: 100vw;
             max-height: 50vh;
             max-height: 50dvh;
-            border-radius: 0 0 var(--border-radius-3) var(--border-radius-3);
+            border-radius: 0 0 var(--_drawer-radius) var(--_drawer-radius);
             transform: translateY(0);
         }
 
@@ -941,7 +953,7 @@
             max-width: 100vw;
             max-height: 85vh;
             max-height: 85dvh;
-            border-radius: var(--border-radius-3) var(--border-radius-3) 0 0;
+            border-radius: var(--_drawer-radius) var(--_drawer-radius) 0 0;
             transform: translateY(0);
         }
 
@@ -990,19 +1002,25 @@
 */
 
         .input {
+            --_input-bg: var(--input-bg, var(--surface-2));
+            --_input-color: var(--input-color, var(--text));
+            --_input-border: var(--input-border, var(--border-color));
+            --_input-radius: var(--input-radius, min(var(--default-radius), var(--border-radius-3)));
+            --_input-padding: var(--input-padding, var(--spacing-3));
+            --_input-focus-color: var(--input-focus-color, var(--brand));
             appearance: none;
-            background-color: var(--surface-2);
-            border: 2px solid var(--border-color);
-            border-radius: min(var(--default-radius), var(--border-radius-3));
-            color: var(--text);
-            padding: var(--spacing-3);
+            background-color: var(--_input-bg);
+            border: 2px solid var(--_input-border);
+            border-radius: var(--_input-radius);
+            color: var(--_input-color);
+            padding: var(--_input-padding);
             transition: border-color var(--duration-0) var(--easing-function-1),
                 box-shadow var(--duration-0) var(--easing-function-1);
 
             &:focus {
                 outline: none;
-                border-color: var(--brand);
-                /* box-shadow: 0 0 0 3px hsl(from var(--brand) h s l / 0.2); */
+                border-color: var(--_input-focus-color);
+                /* box-shadow: 0 0 0 3px hsl(from var(--_input-focus-color) h s l / 0.2); */
             }
 
             &:disabled {
@@ -1100,11 +1118,14 @@
         .checkbox,
         .radio {
             --_accent: var(--accent, var(--brand));
+            --_checkbox-bg: var(--checkbox-bg, var(--surface-0));
+            --_checkbox-border: var(--checkbox-border, var(--muted));
+            --_checkbox-size: var(--checkbox-size, 1.25em);
             appearance: none;
-            width: 1.25em;
-            height: 1.25em;
-            border: 2px solid var(--muted);
-            background-color: var(--surface-0);
+            width: var(--_checkbox-size);
+            height: var(--_checkbox-size);
+            border: 2px solid var(--_checkbox-border);
+            background-color: var(--_checkbox-bg);
             cursor: pointer;
             vertical-align: middle;
             transition: border-color var(--duration-0) var(--easing-function-1),
@@ -1161,11 +1182,15 @@
 */
 
         .switch {
+            --_switch-bg: var(--switch-bg, var(--muted));
+            --_switch-bg-checked: var(--switch-bg-checked, var(--brand));
+            --_switch-knob: var(--switch-knob, var(--surface-0));
+            --_switch-radius: var(--switch-radius, var(--default-radius));
             appearance: none;
             width: 2.5em;
             height: 1.5em;
-            border-radius: var(--default-radius);
-            background-color: var(--muted);
+            border-radius: var(--_switch-radius);
+            background-color: var(--_switch-bg);
             cursor: pointer;
             position: relative;
             transition: background-color var(--duration-0) var(--easing-function-1);
@@ -1175,15 +1200,15 @@
                 position: absolute;
                 width: 1.1em;
                 height: 1.1em;
-                border-radius: var(--default-radius);
-                background-color: var(--surface-0);
+                border-radius: var(--_switch-radius);
+                background-color: var(--_switch-knob);
                 top: 0.2em;
                 left: 0.2em;
                 transition: transform var(--duration-0) var(--easing-function-1);
             }
 
             &:checked {
-                background-color: var(--brand);
+                background-color: var(--_switch-bg-checked);
 
                 &::before {
                     transform: translateX(1em);
@@ -1191,7 +1216,7 @@
             }
 
             &:focus-visible {
-                outline: 2px solid var(--brand);
+                outline: 2px solid var(--_switch-bg-checked);
                 outline-offset: 2px;
             }
 
@@ -1211,20 +1236,28 @@
 */
 
         .btn {
+            --_btn-bg: var(--btn-bg, transparent);
+            --_btn-color: var(--btn-color, var(--text));
+            --_btn-border: var(--btn-border, transparent);
+            --_btn-radius: var(--btn-radius, var(--default-radius));
+            --_btn-padding-x: var(--btn-padding-x, var(--spacing-4));
+            --_btn-padding-y: var(--btn-padding-y, var(--spacing-3));
+            --_btn-gap: var(--btn-gap, var(--spacing-2));
+            --_btn-font-weight: var(--btn-font-weight, 600);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             white-space: nowrap;
-            gap: var(--spacing-2);
-            padding: var(--spacing-3) var(--spacing-4);
+            gap: var(--_btn-gap);
+            padding: var(--_btn-padding-y) var(--_btn-padding-x);
             font-family: inherit;
             font-size: inherit;
-            font-weight: 600;
+            font-weight: var(--_btn-font-weight);
             line-height: 1;
             text-decoration: none;
-            border: 1px solid transparent;
-            border-radius: var(--default-radius);
+            border: 1px solid var(--_btn-border);
+            border-radius: var(--_btn-radius);
             cursor: pointer;
             transition: background-color var(--duration-0) var(--easing-function-1),
                 border-color var(--duration-0) var(--easing-function-1),
@@ -1436,6 +1469,15 @@
 */
 
         .table {
+            --_table-color: var(--table-color, var(--text));
+            --_table-header-bg: var(--table-header-bg, var(--surface-1));
+            --_table-header-color: var(--table-header-color, var(--text));
+            --_table-border: var(--table-border, var(--border-color));
+            --_table-padding-x: var(--table-padding-x, var(--spacing-4));
+            --_table-padding-y: var(--table-padding-y, var(--spacing-3));
+            --_table-stripe-odd: var(--table-stripe-odd, var(--surface-2));
+            --_table-stripe-even: var(--table-stripe-even, var(--surface-3));
+            --_table-hover-bg: var(--table-hover-bg, var(--surface-1));
             width: 100%;
             border-collapse: collapse;
             border-spacing: 0;
@@ -1445,20 +1487,20 @@
 
         .table th,
         .table td {
-            padding: var(--spacing-3) var(--spacing-4);
+            padding: var(--_table-padding-y) var(--_table-padding-x);
             vertical-align: top;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--_table-border);
         }
 
         .table th {
             font-weight: 600;
-            color: var(--text);
-            background-color: var(--surface-1);
-            border-bottom: 2px solid var(--border-color);
+            color: var(--_table-header-color);
+            background-color: var(--_table-header-bg);
+            border-bottom: 2px solid var(--_table-border);
         }
 
         .table td {
-            color: var(--text);
+            color: var(--_table-color);
         }
 
         .table tbody tr:last-child td {
@@ -1467,11 +1509,11 @@
 
         /* Striped rows */
         .table--striped tbody tr:nth-child(odd) {
-            background-color: var(--surface-2);
+            background-color: var(--_table-stripe-odd);
         }
 
         .table--striped tbody tr:nth-child(even) {
-            background-color: var(--surface-3);
+            background-color: var(--_table-stripe-even);
         }
 
         /* Hover effect */
@@ -1480,7 +1522,7 @@
                 transition: background-color var(--duration-0) var(--easing-function-1);
 
                 &:hover {
-                    background-color: var(--surface-1);
+                    background-color: var(--_table-hover-bg);
                 }
             }
         }
@@ -1488,17 +1530,17 @@
         /* Compact variant */
         .table--compact th,
         .table--compact td {
-            padding: var(--spacing-2) var(--spacing-3);
+            padding: calc(var(--_table-padding-y) / 2) calc(var(--_table-padding-x) * 0.75);
         }
 
         /* Bordered variant */
         .table--bordered th,
         .table--bordered td {
-            border: 1px solid var(--surface-1);
+            border: 1px solid var(--_table-border);
         }
 
         .table--bordered th {
-            border-bottom: 2px solid var(--surface-0);
+            border-bottom: 2px solid var(--_table-border);
         }
 
         /* Numeric/monospace cells */
