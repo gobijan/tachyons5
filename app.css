@@ -1178,6 +1178,7 @@
 
         .btn--surface {
             background-color: var(--surface-3);
+            border-color: var(--border-color);
             color: var(--text);
         }
 
