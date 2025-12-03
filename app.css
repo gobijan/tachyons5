@@ -66,11 +66,25 @@
         --notice-dark: var(--blue-6);
         --border-color-dark: hsl(from var(--surface-base-dark) h s calc(l + 16));
 
+        /* Dim theme colors */
+        --brand-dim: var(--indigo-5);
+        --text-dim: var(--slate-gray-10);
+        --muted-dim: var(--slate-gray-8);
+        --surface-base-dim: var(--slate-gray-2);
+
+        --surface-0-dim: var(--surface-base-dim);
+        --surface-1-dim: hsl(from var(--surface-base-dim) h s calc(l + 4));
+        --surface-2-dim: hsl(from var(--surface-base-dim) h s calc(l + 8));
+        --surface-3-dim: hsl(from var(--surface-base-dim) h s calc(l + 12));
+        --error-dim: var(--red-5);
+        --success-dim: var(--green-5);
+        --notice-dim: var(--blue-5);
+        --border-color-dim: hsl(from var(--surface-base-dim) h s calc(l + 12));
+
         /* Default to light theme */
         color-scheme: light;
         --brand: var(--brand-light);
         --text: var(--text-light);
-        --link: var(--text);
         --muted: var(--muted-light);
         --surface-0: var(--surface-0-light);
         --surface-1: var(--surface-1-light);
@@ -108,7 +122,7 @@
     }
 
     /* Manual light mode override */
-    [color-scheme="light"] {
+    [data-theme="light"] {
         color-scheme: light;
         --shadow-color: 220 3% 15%;
         --shadow-strength: 1%;
@@ -127,7 +141,7 @@
     }
 
     /* Manual dark mode override */
-    [color-scheme="dark"] {
+    [data-theme="dark"] {
         color-scheme: dark;
         --shadow-color: 220 40% 2%;
         --shadow-strength: 25%;
@@ -145,21 +159,22 @@
         --border-color: var(--border-color-dark);
     }
 
-    /* ==========================================================================
-   BASE TYPOGRAPHY
-   ========================================================================== */
-
-    body {
-        line-height: var(--line-height-body);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        line-height: var(--line-height-heading);
+    [data-theme="dim"] {
+        color-scheme: dark;
+        --shadow-color: 220 40% 2%;
+        --shadow-strength: 25%;
+        --inner-shadow-highlight: inset 0 -.5px 0 0 #fff1, inset 0 .5px 0 0 #0007;
+        --brand: var(--brand-dim);
+        --text: var(--text-dim);
+        --muted: var(--muted-dim);
+        --surface-0: var(--surface-0-dim);
+        --surface-1: var(--surface-1-dim);
+        --surface-2: var(--surface-2-dim);
+        --surface-3: var(--surface-3-dim);
+        --error: var(--error-dim);
+        --success: var(--success-dim);
+        --notice: var(--notice-dim);
+        --border-color: var(--border-color-dim);
     }
 
 }
@@ -478,7 +493,7 @@
    ==========================================================================
 
    Styled hyperlinks with hover effects and variants.
-   
+
    Usage:
    <a href="#" class="link">Default link</a>
    <a href="#" class="link link--muted">Muted link</a>
@@ -487,10 +502,9 @@
 */
 
         /* Base link styles - bare <a> tags and explicit .link class from tachyons5 */
-        a:not([class]),
-        .link {
+        a:not([class]) {
             text-decoration: none;
-            color: var(--link);
+            color: var(--text);
             font-weight: 500;
         }
 
@@ -499,18 +513,11 @@
         a:not([class]):focus,
         a:not([class]):hover,
         a:not([class]):link,
-        a:not([class]):visited,
-        .link,
-        .link:active,
-        .link:focus,
-        .link:hover,
-        .link:link,
-        .link:visited {
+        a:not([class]):visited {
             transition: all .15s ease-in
         }
 
-        a:not([class]):focus,
-        .link:focus {
+        a:not([class]):focus {
             outline: 1px dotted currentColor
         }
 
@@ -1589,7 +1596,7 @@
     /* ==========================================================================
    OVERRIDES LAYER
    ==========================================================================
-   
+
    Use this layer for app-specific overrides that need to win over components.
    This layer has the highest priority in the cascade.
    Focus ring utilities are here so they can override any component's default focus.
