@@ -487,6 +487,50 @@
    ========================================================================== */
 
     /* ==========================================================================
+   BLOCK SPACING
+   ==========================================================================
+
+   Consistent vertical rhythm between sibling elements.
+   Adds margin-bottom to all elements except the last child.
+   Inspired by Bulma's .block pattern.
+
+   Usage:
+   <div class="stack">
+     <p>First paragraph</p>
+     <p>Second paragraph</p>
+     <p>Third paragraph (no bottom margin)</p>
+   </div>
+
+   Size variants use numeric scale like other tachyons utilities:
+   <div class="stack3">...</div>  (uses spacing-3)
+
+   The default spacing is controlled by --block-spacing (default: --spacing-5)
+
+*/
+
+    :root {
+        --block-spacing: var(--spacing-5);
+    }
+
+    /* Stack container - children get block spacing */
+    .stack > *:not(:last-child) { margin-bottom: var(--block-spacing); }
+
+    /* Stack size variants - matches tachyons numeric scale */
+    .stack1 > *:not(:last-child) { margin-bottom: var(--spacing-1); }
+    .stack2 > *:not(:last-child) { margin-bottom: var(--spacing-2); }
+    .stack3 > *:not(:last-child) { margin-bottom: var(--spacing-3); }
+    .stack4 > *:not(:last-child) { margin-bottom: var(--spacing-4); }
+    .stack5 > *:not(:last-child) { margin-bottom: var(--spacing-5); }
+    .stack6 > *:not(:last-child) { margin-bottom: var(--spacing-6); }
+    .stack7 > *:not(:last-child) { margin-bottom: var(--spacing-7); }
+
+    /* Components that inherit block spacing automatically */
+    .card:not(:last-child),
+    .table:not(:last-child) {
+        margin-bottom: var(--block-spacing);
+    }
+
+    /* ==========================================================================
    LINKS
    ==========================================================================
 

@@ -301,6 +301,37 @@ For native form elements (checkboxes, radios, range, progress).
 | `accent-success` | Success accent color |
 | `accent-notice` | Notice accent color |
 
+### Stack Spacing
+
+Automatic vertical rhythm between sibling elements. Inspired by Bulma's `.block` pattern.
+
+```html
+<!-- Default stack spacing -->
+<div class="stack">
+  <p>First paragraph</p>
+  <p>Second paragraph</p>
+  <p>Third paragraph (no bottom margin)</p>
+</div>
+
+<!-- Tight stack for forms -->
+<form class="stack3">
+  <input type="text" class="input" placeholder="Name">
+  <input type="email" class="input" placeholder="Email">
+  <button class="btn btn--brand">Submit</button>
+</form>
+```
+
+| Class | Spacing |
+|-------|---------|
+| `stack` | Default (`--block-spacing`, 32px) |
+| `stack1` | 2px |
+| `stack2` | 4px |
+| `stack3` | 8px |
+| `stack4` | 16px |
+| `stack5` | 32px |
+| `stack6` | 64px |
+| `stack7` | 128px |
+
 ### Skeleton / Loading States
 
 ```html
