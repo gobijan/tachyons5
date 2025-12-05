@@ -94,9 +94,12 @@ curl -O https://raw.githubusercontent.com/gobijan/tachyons5/main/tachyons5.css
 
 **Button Styles**
 ```html
-<button class="f3 fw5 link dim br3 pb3 pi2 mbe2 dib white bg-blue-5 bn pointer f-body">
-    Click Me
-</button>
+<button class="btn btn--brand">Brand Button</button>
+<button class="btn btn--success">Success</button>
+<button class="btn btn--error">Error</button>
+<button class="btn btn--notice">Notice</button>
+<button class="btn btn--outline">Outline</button>
+<button class="btn btn--ghost">Ghost</button>
 ```
 
 ---

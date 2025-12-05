@@ -27,6 +27,11 @@
         /* Default component radius */
         --default-radius: var(--border-radius-11);
 
+        /* Light theme shadow defaults */
+        --shadow-color: 220 3% 15%;
+        --shadow-strength: 1%;
+        --inner-shadow-highlight: inset 0 -.5px 0 0 #fff, inset 0 .5px 0 0 #0001;
+
         /* Light theme colors */
         --brand-light: var(--indigo-5);
         --text-light: var(--slate-gray-0);
@@ -1046,7 +1051,6 @@
         &:focus {
             outline: none;
             border-color: var(--_input-focus-color);
-            /* box-shadow: 0 0 0 3px hsl(from var(--_input-focus-color) h s l / 0.2); */
         }
 
         &:disabled {
@@ -1334,8 +1338,8 @@
         color: var(--text);
 
         &:hover:not(:disabled) {
-            border-color: var(--surface-2);
-            background-color: var(--surface-1);
+            border-color: var(--muted);
+            background-color: var(--surface-2);
         }
     }
 
@@ -1364,6 +1368,15 @@
 
         &:hover:not(:disabled) {
             background-color: hsl(from var(--success) h s calc(l - 5));
+        }
+    }
+
+    .btn--notice {
+        background-color: var(--notice);
+        color: white;
+
+        &:hover:not(:disabled) {
+            background-color: hsl(from var(--notice) h s calc(l - 5));
         }
     }
 
