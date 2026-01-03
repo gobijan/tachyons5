@@ -8303,6 +8303,102 @@
         color: var(--shadow-11)
     }
 
+    .overlay-tint-0 {
+        color: var(--overlay-tint-0)
+    }
+
+    .overlay-tint-1 {
+        color: var(--overlay-tint-1)
+    }
+
+    .overlay-tint-2 {
+        color: var(--overlay-tint-2)
+    }
+
+    .overlay-tint-3 {
+        color: var(--overlay-tint-3)
+    }
+
+    .overlay-tint-4 {
+        color: var(--overlay-tint-4)
+    }
+
+    .overlay-tint-5 {
+        color: var(--overlay-tint-5)
+    }
+
+    .overlay-tint-6 {
+        color: var(--overlay-tint-6)
+    }
+
+    .overlay-tint-7 {
+        color: var(--overlay-tint-7)
+    }
+
+    .overlay-tint-8 {
+        color: var(--overlay-tint-8)
+    }
+
+    .overlay-tint-9 {
+        color: var(--overlay-tint-9)
+    }
+
+    .overlay-tint-10 {
+        color: var(--overlay-tint-10)
+    }
+
+    .overlay-tint-11 {
+        color: var(--overlay-tint-11)
+    }
+
+    .overlay-shadow-0 {
+        color: var(--overlay-shadow-0)
+    }
+
+    .overlay-shadow-1 {
+        color: var(--overlay-shadow-1)
+    }
+
+    .overlay-shadow-2 {
+        color: var(--overlay-shadow-2)
+    }
+
+    .overlay-shadow-3 {
+        color: var(--overlay-shadow-3)
+    }
+
+    .overlay-shadow-4 {
+        color: var(--overlay-shadow-4)
+    }
+
+    .overlay-shadow-5 {
+        color: var(--overlay-shadow-5)
+    }
+
+    .overlay-shadow-6 {
+        color: var(--overlay-shadow-6)
+    }
+
+    .overlay-shadow-7 {
+        color: var(--overlay-shadow-7)
+    }
+
+    .overlay-shadow-8 {
+        color: var(--overlay-shadow-8)
+    }
+
+    .overlay-shadow-9 {
+        color: var(--overlay-shadow-9)
+    }
+
+    .overlay-shadow-10 {
+        color: var(--overlay-shadow-10)
+    }
+
+    .overlay-shadow-11 {
+        color: var(--overlay-shadow-11)
+    }
+
     .black,
     .gray-0 {
         color: var(--gray-0)
@@ -9071,6 +9167,102 @@
 
     .bg-shadow-11 {
         background-color: var(--shadow-11)
+    }
+
+    .bg-overlay-tint-0 {
+        background-color: var(--overlay-tint-0)
+    }
+
+    .bg-overlay-tint-1 {
+        background-color: var(--overlay-tint-1)
+    }
+
+    .bg-overlay-tint-2 {
+        background-color: var(--overlay-tint-2)
+    }
+
+    .bg-overlay-tint-3 {
+        background-color: var(--overlay-tint-3)
+    }
+
+    .bg-overlay-tint-4 {
+        background-color: var(--overlay-tint-4)
+    }
+
+    .bg-overlay-tint-5 {
+        background-color: var(--overlay-tint-5)
+    }
+
+    .bg-overlay-tint-6 {
+        background-color: var(--overlay-tint-6)
+    }
+
+    .bg-overlay-tint-7 {
+        background-color: var(--overlay-tint-7)
+    }
+
+    .bg-overlay-tint-8 {
+        background-color: var(--overlay-tint-8)
+    }
+
+    .bg-overlay-tint-9 {
+        background-color: var(--overlay-tint-9)
+    }
+
+    .bg-overlay-tint-10 {
+        background-color: var(--overlay-tint-10)
+    }
+
+    .bg-overlay-tint-11 {
+        background-color: var(--overlay-tint-11)
+    }
+
+    .bg-overlay-shadow-0 {
+        background-color: var(--overlay-shadow-0)
+    }
+
+    .bg-overlay-shadow-1 {
+        background-color: var(--overlay-shadow-1)
+    }
+
+    .bg-overlay-shadow-2 {
+        background-color: var(--overlay-shadow-2)
+    }
+
+    .bg-overlay-shadow-3 {
+        background-color: var(--overlay-shadow-3)
+    }
+
+    .bg-overlay-shadow-4 {
+        background-color: var(--overlay-shadow-4)
+    }
+
+    .bg-overlay-shadow-5 {
+        background-color: var(--overlay-shadow-5)
+    }
+
+    .bg-overlay-shadow-6 {
+        background-color: var(--overlay-shadow-6)
+    }
+
+    .bg-overlay-shadow-7 {
+        background-color: var(--overlay-shadow-7)
+    }
+
+    .bg-overlay-shadow-8 {
+        background-color: var(--overlay-shadow-8)
+    }
+
+    .bg-overlay-shadow-9 {
+        background-color: var(--overlay-shadow-9)
+    }
+
+    .bg-overlay-shadow-10 {
+        background-color: var(--overlay-shadow-10)
+    }
+
+    .bg-overlay-shadow-11 {
+        background-color: var(--overlay-shadow-11)
     }
 
     .bg-black,
