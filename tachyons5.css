@@ -220,9 +220,9 @@
 
 /* end @layer base */
 
-@custom-media min-width:30em screen and (min-width:30em);
-@custom-media min-width: 48em screen and (min-width:48em);
-@custom-media min-width: 64em screen and (min-width:60em);
+@custom-media --min-width-s (min-width: 30em);
+@custom-media --min-width-m (min-width: 48em);
+@custom-media --min-width-l (min-width: 64em);
 
 @layer tokens {
 
@@ -467,36 +467,33 @@
         --cyan-9: #85eaf2;
         --cyan-10: #b4f5f9;
         --cyan-11: #e2ffff;
-        --transparent: hsla(0, 0, 0, 0);
+        --transparent: hsla(0, 0%, 0%, 0);
 
         @supports (color:color(display-p3 1 1 1)) {
-            :root {
-                --blue-0: color(display-p3 0 .07 .25);
-                --blue-1: color(display-p3 0 .09 .32);
-                --blue-2: color(display-p3 0 .11 .42);
-                --blue-3: color(display-p3 0 .15 .53);
-                --blue-4: color(display-p3 0 .16 .7);
-                --blue-5: color(display-p3 0 .22 .88);
-                --blue-6: color(display-p3 .06 .37 1);
-                --blue-7: color(display-p3 .38 .59 1);
-                --blue-8: color(display-p3 .66 .79 1);
-                --blue-9: color(display-p3 .79 .86 .99);
-                --blue-10: color(display-p3 .87 .92 .99);
-                --blue-11: color(display-p3 .92 .95 1);
-                --indigo-0: color(display-p3 .06 .03 .21);
-                --indigo-1: color(display-p3 .09 .07 .26);
-                --indigo-2: color(display-p3 .15 .11 .42);
-                --indigo-3: color(display-p3 .18 .14 .57);
-                --indigo-4: color(display-p3 .2 .18 .75);
-                --indigo-5: color(display-p3 .26 .22 1);
-                --indigo-6: color(display-p3 .28 .28 1);
-                --indigo-7: color(display-p3 .47 .49 1);
-                --indigo-8: color(display-p3 .67 .68 1);
-                --indigo-9: color(display-p3 .81 .81 .98);
-                --indigo-10: color(display-p3 .87 .92 .99);
-                --indigo-11: color(display-p3 .92 .95 1)
-            }
-
+            --blue-0: color(display-p3 0 .07 .25);
+            --blue-1: color(display-p3 0 .09 .32);
+            --blue-2: color(display-p3 0 .11 .42);
+            --blue-3: color(display-p3 0 .15 .53);
+            --blue-4: color(display-p3 0 .16 .7);
+            --blue-5: color(display-p3 0 .22 .88);
+            --blue-6: color(display-p3 .06 .37 1);
+            --blue-7: color(display-p3 .38 .59 1);
+            --blue-8: color(display-p3 .66 .79 1);
+            --blue-9: color(display-p3 .79 .86 .99);
+            --blue-10: color(display-p3 .87 .92 .99);
+            --blue-11: color(display-p3 .92 .95 1);
+            --indigo-0: color(display-p3 .06 .03 .21);
+            --indigo-1: color(display-p3 .09 .07 .26);
+            --indigo-2: color(display-p3 .15 .11 .42);
+            --indigo-3: color(display-p3 .18 .14 .57);
+            --indigo-4: color(display-p3 .2 .18 .75);
+            --indigo-5: color(display-p3 .26 .22 1);
+            --indigo-6: color(display-p3 .28 .28 1);
+            --indigo-7: color(display-p3 .47 .49 1);
+            --indigo-8: color(display-p3 .67 .68 1);
+            --indigo-9: color(display-p3 .81 .81 .98);
+            --indigo-10: color(display-p3 .87 .92 .99);
+            --indigo-11: color(display-p3 .92 .95 1);
         }
 
         --degrees-1:0;
@@ -647,7 +644,7 @@
         --size-7:48rem;
         --size-8:64rem;
         --size-9:96rem;
-        --shadow-color: 0 0 0;
+        --shadow-color-flat: 0 0 0;
         --shadow-color-invert: 255 255 255;
         --shadow-border-width: 1px;
         --shadow-opacity: .25;
@@ -702,14 +699,12 @@
         overflow-x: auto;
         overflow-y: hidden;
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
         max-width: 100%;
     }
 
     .scroll-snap-y {
         overflow-y: auto;
         scroll-snap-type: y mandatory;
-        -webkit-overflow-scrolling: touch;
     }
 
     .scroll-snap-x-proximity {
@@ -846,7 +841,7 @@
 
 */
 
-    ::selection {
+    .selection-brand::selection {
         background-color: var(--brand);
         color: var(--surface-0);
     }
@@ -977,7 +972,6 @@
     /* Word break */
     .break-word {
         overflow-wrap: break-word;
-        word-break: break-word;
     }
 
     .break-all {
@@ -2435,7 +2429,7 @@
     }
 
     .box-shadow {
-        box-shadow: var(--shadow, inset 0 0 1px 0 rgb(var(--shadow-color, 0 0 0)/var(--shadow-opacity, .5)))
+        box-shadow: var(--shadow, inset 0 0 1px 0 rgb(var(--shadow-color-flat, 0 0 0)/var(--shadow-opacity, .5)))
     }
 
     .box-shadow-hover:focus,
@@ -2444,7 +2438,7 @@
     }
 
     .box-shadow-border-1 {
-        box-shadow: inset 0 0 var(--shadow-border-width, 1px) 0 rgb(var(--shadow-color, 0 0 0)/var(--shadow-opacity, .125))
+        box-shadow: inset 0 0 var(--shadow-border-width, 1px) 0 rgb(var(--shadow-color-flat, 0 0 0)/var(--shadow-opacity, .125))
     }
 
     .box-shadow-border-2 {
@@ -2456,7 +2450,7 @@
     }
 
     .box-shadow-border-4 {
-        box-shadow: inset 0 0 2px 0 rgb(var(--shadow-color, 0 0 0)/var(--shadow-opacity, .125))
+        box-shadow: inset 0 0 2px 0 rgb(var(--shadow-color-flat, 0 0 0)/var(--shadow-opacity, .125))
     }
 
     .box-shadow-border-5 {
@@ -2496,23 +2490,23 @@
     }
 
     .text-shadow-1 {
-        text-shadow: rgb(var(--shadow-color)) -4px 4px 0
+        text-shadow: rgb(var(--shadow-color-flat)) -4px 4px 0
     }
 
     .text-shadow-2 {
-        text-shadow: rgb(var(--shadow-color)) -8px 8px 0
+        text-shadow: rgb(var(--shadow-color-flat)) -8px 8px 0
     }
 
     .text-shadow-3 {
-        text-shadow: rgb(var(--shadow-color)/var(--shadow-opacity, .5)) -8px 8px 0
+        text-shadow: rgb(var(--shadow-color-flat)/var(--shadow-opacity, .5)) -8px 8px 0
     }
 
     .text-shadow-4 {
-        text-shadow: rgba(var(--shadow-color)/var(--shadow-opacity, .5)) -4px 4px 8px
+        text-shadow: rgba(var(--shadow-color-flat)/var(--shadow-opacity, .5)) -4px 4px 8px
     }
 
     .text-shadow-5 {
-        text-shadow: rgb(var(--shadow-color)) 2px 0 0, rgb(var(--shadow-color)) 0 2px 0, rgb(var(--shadow-color)) -2px 0 0, rgb(var(--shadow-color)) 0 -2px 0, rgb(var(--shadow-color)) -2px -2px 0, rgb(var(--shadow-color)) 2px -2px 0, rgb(var(--shadow-color)) 2px 2px 0, rgb(var(--shadow-color)) -2px 2px 0
+        text-shadow: rgb(var(--shadow-color-flat)) 2px 0 0, rgb(var(--shadow-color-flat)) 0 2px 0, rgb(var(--shadow-color-flat)) -2px 0 0, rgb(var(--shadow-color-flat)) 0 -2px 0, rgb(var(--shadow-color-flat)) -2px -2px 0, rgb(var(--shadow-color-flat)) 2px -2px 0, rgb(var(--shadow-color-flat)) 2px 2px 0, rgb(var(--shadow-color-flat)) -2px 2px 0
     }
 
     .text-shadow-6 {
@@ -14112,7 +14106,7 @@
         }
 
         .mi1-s {
-            margin-inline: var(--spacing-1, 4px)
+            margin-inline: var(--spacing-1, 2px)
         }
 
         .mi2-s {
